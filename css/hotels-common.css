@@ -288,7 +288,7 @@
       margin-top: 0px;
       border-top: none;
       margin-bottom: 36px;
-      max-width: 656px;
+      max-width: 100%;
     }
     .reviews .reviews-block .reviews-header h3 {
       margin-top: 55px;
@@ -304,7 +304,7 @@
       margin-top: 0px;
       border-top: none;
       margin-bottom: 45px;
-      max-width: 656px;
+      max-width: 100%;
     }
     .reviews .reviews-block .reviews-header h3 {
       margin-top: 46px;

@@ -308,7 +308,7 @@
             <div class="hotels-h1" style="display: flex">
                 <h1 class="hotels-h1">Название тура</h1>
                 <div class="hotels__wrapper-stars">
-                    <div class="hotels__wrapper-stars-item"><img src="images/icon/star.svg" alt="start"></div>
+                    <div class="hotels__wrapper-stars-item"><img src="images/icon/star.svg" alt="star"></div>
                     <div class="hotels__wrapper-stars-item"><img src="images/icon/star.svg" alt="star"></div>
                     <div class="hotels__wrapper-stars-item"><img src="images/icon/star.svg" alt="star"></div>
                     <div class="hotels__wrapper-stars-item"><img src="images/icon/star.svg" alt="star"></div>
@@ -346,7 +346,7 @@
                         Италия, Флоренция <span>SPA Отель</span>
                         <p></p>
                     </div>
-                    <div class="hoter-header__options">6 вариантов от 76 546 руб</div>
+                    <div class="hotel-header__options hotel-header__options-desktop">6 вариантов <br> от 76 546 руб</div>
                     <a href="#hotel-page-price" class="btn-orange hotel-page-anchor">Купить тур</a>
                 </div>
             </header>
@@ -428,7 +428,7 @@
                                             <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/7a2beec047b57cd3f1c389b9743fbc75.jpg" alt=""></div>
                                     </div>
             </div>
-
+            <div class="hotel-header__options hotel-header__options-mobile">6 вариантов <br> от 76 546 руб</div>
             <div class="mt-40 hotel-subtitle">
                 <span>Услуги и удобства</span>
                 <a href="#hotel-page-map" class="link-underline hotel-page-ancho">все удобства (65)</a>
@@ -690,6 +690,7 @@
                                     <div class="review__wrapper-block-user-text">Чем понравился сервис оперативно, четко, легко разобраться. Я вообще люблю, когда все варианты в одном месте. Искала недорогой хостел для летнего отпуска.. Выбирала минут 10 и забронила чудесную комнат))</div>
                                     <div class="review__wrapper-block-user-answer">Ответить</div>
                                 </div>
+                                <div class="review__wrapper-block-item-more">Показать еще отзывы <img src="images/icon/hotel__description-more.svg" alt=""></div>
                             </div>
                         </div>
 
@@ -1286,6 +1287,145 @@
 <script src="/assets/51d339c4/yii.captcha.js"></script> -->
 
 <!-- <script src="code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script> -->
+<div class="modal__review hide">
+    <div class="container">
+        <div class="modal__dialog">
+            <div class="modal__review-item">
+                <div class="modal__review-title">Оставить отзыв</div>
+                <div class="modal__review-stars-wrapper">
+                    <div class="modal__review-stars-item"><img src="images/icon/star.svg" alt=""></div>
+                    <div class="modal__review-stars-item"><img src="images/icon/star.svg" alt=""></div>
+                    <div class="modal__review-stars-item"><img src="images/icon/star.svg" alt=""></div>
+                    <div class="modal__review-stars-item"><img src="images/icon/star.svg" alt=""></div>
+                    <div class="modal__review-stars-item"><img src="images/icon/star.svg" alt=""></div>
+                </div>
+                <form action="">
+                    <input type="text" class="modal__review-name" placeholder="Ваше имя*">
+                    <input type="text"class="modal__review-text" placeholder="Ваш отзыв*">
+                    <div class="modal__review-captcha">
+                        <div class="modal__review-captcha-item">IOUYTGF3 4567</div>
+                        <input type="text" class="modal__review-captcha-input" placeholder="каптча*">
+                    </div>
+                    <button class="modal__review-submit">оставить отзыв</button>
+                </form>
+                <button class="modal__review-exit"><img src="images/icon/exit-modal.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal__tour show">
+    <div class="container">
+        <div class="modal__dialog">
+            <div class="modal__tour-item">
+                <div class="modal__tour-item-wrapper">
+                    <div class="modal__tour-left">
+                        <img src="images/modal-image-prev.png" alt="#" class="modal__tour-left-img">
+                        <div class="modal__tour-left-images">
+                            <img src="images/modal-image-prev.png" alt="#">
+                            <img src="images/modal-image-prev.png" alt="#">
+                            <img src="images/modal-image-prev.png" alt="#">
+                            <img src="images/modal-image-prev.png" alt="#">
+                        </div>
+                        <div class="modal__tour-left-title">
+                            <img src="images/icon/caffee 1.svg" alt="">
+                            Завтрак (BB)
+                        </div>
+                        <div class="modal__tour-left-wrapper-price">
+                            <div class="modal__tour-left-wrapper-price-items">
+                                <div class="modal__tour-left-wrapper-price-item">76 546 руб</div>
+                                <div class="modal__tour-left-wrapper-price-item"><span>Цена за 7 ночей</span></div>
+                            </div>
+                            <div class="modal__tour-left-wrapper-price-items"><button>забронировать</button></div>
+                        </div>
+                    </div>
+                    <div class="modal__tour-right">
+                        <div class="modal__tour-right-title">Номер Superior
+                        </div>
+                        <div class="modal__tour-right-subtitle">Описание номера</div>
+                        <div class="modal__tour-right-type-wrapper">
+                            <div class="modal__tour-right-type-wrapper-item">
+                                <div class="modal__tour-right-type-wrapper-item-img">
+                                    <img src="images/icon/kv.svg" alt="">
+                                </div>
+                                <span>35 кв. м.
+                                </span>
+                            </div>
+                            <div class="modal__tour-right-type-wrapper-item">
+                                <div class="modal__tour-right-type-wrapper-item-img">
+                                    <img src="images/icon/bed-count.svg" alt="">
+                                    
+                                </div>
+                                <span>2 односпальные / 1 двуспальная
+                                </span>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="modal__tour-right-location-wrapper">
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">Вид из номера:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">на сад</div>
+                            </div>
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">Расположение:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">Основное здание</div>
+                            </div>
+                        </div>
+                        <div class="modal__tour-right-location-title">Удобства:</div>
+                        <div class="modal__tour-right-location-wrapper">
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">wifi:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">бесплатно</div>
+                            </div>
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">балкон терраса:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">балкон</div>
+                            </div>
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">кондиционер:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">центральный</div>
+                            </div>
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">телевизор:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">бесплатно</div>
+                            </div>
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">сейф:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">бесплатно</div>
+                            </div>
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">мини-бар:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">есть</div>
+                            </div>
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">телефон:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">есть</div>
+                            </div>
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">фен:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">есть</div>
+                            </div>
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">халат:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">есть</div>
+                            </div>
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">тапочки:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">есть</div>
+                            </div>
+                            <div class="modal__tour-right-location-title">Обслуживание:</div>
+                            <div class="modal__tour-right-location-wrapper-item">
+                                <div class="modal__tour-right-location-wrapper-item-left">Уборка в номере:</div>
+                                <div class="modal__tour-right-location-wrapper-item-right">ежедневно</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="modal__review-exit"><img src="images/icon/exit-modal.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="js/jquery.barrating.min.js"></script> 
 <script
   src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
@@ -1295,6 +1435,7 @@
 <script src="js/main.js"></script>
 <script src="js/hotels.js"></script>
 <script src="js/hotels-common.js"></script>
+<script src="js/script.js"></script>
 <script>$('#reviews-stars').barrating({
         theme: 'css-stars',
         showSelectedRating: false
