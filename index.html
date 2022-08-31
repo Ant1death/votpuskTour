@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+    <html lang="ru-RU">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap"
+              rel="stylesheet">
+                <title>Название тура</title>
+        <meta name="description" content="Цены на номера, отзывы, фото реальных путешественников. Хостел Старая дача (Сочи, Россия). Сравнивайте цены и выбирайте лучший вариант для своего проживания.">
+        <meta name="csrf-param" content="_csrf-frontend">
+        <meta name="csrf-token" content="v7GEH0XZeINMb967f_o6yQS6mNihbLgxMOS61rupbWSNgvNFFKEPsnoVpMIliwiefNeplOQuiAhSyd2diJsjDw==">
+
+<link href="css/style.min.css" rel="stylesheet">
+
+<link href="css/hotels.css" rel="stylesheet">
+<link href="css/hotels-common.css" rel="stylesheet">
+<link rel="stylesheet" href="css/tours.css">
+<link href="css/menu.css" rel="stylesheet">
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;load=package.full"></script>
+<script>
+                ymaps.ready(function () {
+                    var myMap = new ymaps.Map('hotel-map', {
+                        center: [43.585866081975, 39.755980892031],
+                        zoom: 18
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    });
+                    
+                        myMap.geoObjects
+                    .add(new ymaps.Placemark([43.585866081975, 39.755980892031], {
+                        balloonContent: 'Старая дача'
+                    }, {
+                        preset: 'islands#icon',
+                        iconColor: '#0095b6'
+                    }))
+                })
+                </script>        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    </head>
+
+    <body class="hotels-page" id="page-header">
+
+    
+    
+    <header class="header header--bordered">
+        <div class="header__container container button-position">
+                            <a class="header__logo" href="/">
+                    <img class="header__logo-icon" src="https://www.votpusk.ru/images/logo.svg" alt="">
+                </a>
+                        <a href="/hotels" class="header__info">Туры</a>
+            <form class="header__search header__search--desktop">
+                <div class="header__search-line">
+                    <input class="header__search-input" type="text"
+                           placeholder="Поиск по сайту">
+                                            <svg class="header__search-icon" width="18" height="18" viewBox="0 0 18 18"
+                             xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path d="M17.78 16.722l-4.327-4.327c1.073-1.308 1.719-2.983 1.719-4.809 0-4.188-3.398-7.586-7.586-7.586-4.191 0-7.586 3.398-7.586 7.586 0 4.188 3.394 7.586 7.586 7.586 1.826 0 3.497-.643 4.805-1.716l4.327 4.324c.294.294.768.294 1.062 0 .294-.29.294-.768 0-1.058zm-10.194-3.06c-3.354 0-6.08-2.726-6.08-6.076 0-3.35 2.726-6.08 6.08-6.08 3.35 0 6.08 2.729 6.08 6.08 0 3.35-2.729 6.076-6.08 6.076z"
+                                  fill="#0061B7"></path>
+                        </svg>
+                                    </div>
+                <button class="header__submit button-position">Найти</button>
+            </form>
+            <svg class="header__search-show" width="18" height="18" viewBox="0 0 18 18"
+                 xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path
+                        d="M17.78 16.722l-4.327-4.327c1.073-1.308 1.719-2.983 1.719-4.809 0-4.188-3.398-7.586-7.586-7.586-4.191 0-7.586 3.398-7.586 7.586 0 4.188 3.394 7.586 7.586 7.586 1.826 0 3.497-.643 4.805-1.716l4.327 4.324c.294.294.768.294 1.062 0 .294-.29.294-.768 0-1.058zm-10.194-3.06c-3.354 0-6.08-2.726-6.08-6.076 0-3.35 2.726-6.08 6.08-6.08 3.35 0 6.08 2.729 6.08 6.08 0 3.35-2.729 6.076-6.08 6.076z"
+                        fill="currentColor"/>
+            </svg>
+                            <button class="header__burger burger">
+                    <svg class="burger__icon burger__icon--open" width="24" height="18" viewBox="0 0 24 18"
+                         xmlns="http://www.w3.org/2000/svg" fill="none">
+                        <path d="M18.127 5.578h-17.156c-.534 0-.97.436-.97.97s.436.97.97.97h17.161c.534 0 .97-.436.97-.97-.005-.534-.436-.97-.975-.97zm4.903-4.903h-22.059c-.534 0-.97.436-.97.97s.436.97.97.97h22.059c.534 0 .97-.436.97-.97s-.436-.97-.97-.97zm0 9.806h-22.059c-.534 0-.97.436-.97.97s.436.97.97.97h22.059c.534 0 .97-.436.97-.97s-.436-.97-.97-.97zm-4.903 4.903h-17.156c-.534 0-.97.436-.97.97s.436.97.97.97h17.161c.534 0 .97-.436.97-.97s-.436-.97-.975-.97z"
+                              fill="#000"></path>
+                    </svg>
+                    <svg class="burger__icon burger__icon--close" width="16" height="16" viewBox="0 0 16 16"
+                         xmlns="http://www.w3.org/2000/svg" fill="none">
+                        <path d="M9.044 8l6.141-6.141c.121-.142.185-.324.178-.51-.007-.186-.085-.363-.216-.495-.132-.132-.309-.209-.495-.216-.186-.007-.369.056-.51.178l-6.141 6.141-6.141-6.148c-.139-.139-.329-.218-.526-.218s-.386.078-.526.218c-.139.139-.218.329-.218.526s.078.386.218.526l6.148 6.141-6.148 6.141c-.078.066-.141.148-.185.24-.044.092-.069.192-.073.294-.004.102.013.204.05.299.037.095.094.181.166.254.072.072.159.129.254.166.095.037.197.054.299.05.102-.004.202-.029.294-.073.092-.044.174-.107.24-.185l6.148-6.141 6.141 6.141c.142.121.324.185.51.178.187-.007.363-.085.495-.216.132-.132.209-.309.216-.495.007-.186-.056-.369-.178-.51l-6.141-6.141z"
+                              fill="#000"></path>
+                    </svg>
+                </button>
+                    </div>
+    </header>
+    <div class="container">
+        <div class="menu-wrapper">
+            <div class="menu">
+                <ul class="header-menu"><li><span class="header-title">Готовые туры</span>
+<ul class='header-submenu'>
+<li><a href="/tours">Поиск и покупка туров</a></li>
+<li><a href="/types-tours.asp">Виды туров</a></li>
+<li><a href="/toursear.asp">Популярные страны</a></li>
+<li><a href="/tours-russia.asp">Туры по России</a></li>
+<li><a href="/toursr_prof.asp?TP=KRZ">Круизы</a></li>
+</ul>
+</li>
+<li><span class="header-title">Едем сами</span>
+<ul class='header-submenu'>
+<li><a href="https://routes.votpusk.ru/">Маршруты</a></li>
+<li><a href="/all-affiliate-programs.asp">Купить on-line</a></li>
+<li><a href="/train">ЖД билеты</a></li>
+</ul>
+</li>
+<li><span class="header-title">Путеводитель</span>
+<ul class='header-submenu'>
+<li><a href="/country.asp">Страны</a></li>
+<li><a href="/cities.asp">Города, курорты</a></li>
+<li><a href="/country/dostoprim_s.asp">Достопримечательности</a></li>
+<li><a href="/hotels">Отели</a></li>
+<li><a href="/country/sovet.asp">Вопросы</a></li>
+</ul>
+</li>
+<li><span class="header-title">Информация</span>
+<ul class='header-submenu'>
+<li><a href="/newsonline.asp">Новости</a></li>
+<li><a href="/edit">Статьи</a></li>
+<li><a href="/story/fotobzor.asp">Фоторепортажи</a></li>
+<li><a href="/weather">Погода</a></li>
+<li><a href="/spravka">Справочник</a></li>
+</ul>
+</li>
+<li><span class="header-title">B2B</span>
+<ul class='header-submenu'>
+<li><a href="/busines.asp">Турбизнес</a></li>
+<li><a href="/firmlist.asp">Турфирмы</a></li>
+</ul>
+</li></ul>
+                <form class="header__search header__search--mobile">
+                    <div class="header__search-line">
+                        <input class="header__search-input" type="text" placeholder="Поиск по сайту">
+                        <svg class="header__search-icon" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path d="M17.78 16.722l-4.327-4.327c1.073-1.308 1.719-2.983 1.719-4.809 0-4.188-3.398-7.586-7.586-7.586-4.191 0-7.586 3.398-7.586 7.586 0 4.188 3.394 7.586 7.586 7.586 1.826 0 3.497-.643 4.805-1.716l4.327 4.324c.294.294.768.294 1.062 0 .294-.29.294-.768 0-1.058zm-10.194-3.06c-3.354 0-6.08-2.726-6.08-6.076 0-3.35 2.726-6.08 6.08-6.08 3.35 0 6.08 2.729 6.08 6.08 0 3.35-2.729 6.076-6.08 6.076z" fill="#fff"></path>
+                        </svg>
+                    </div>
+                    <button class="header__submit button-position">Найти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="container hotel-page">
+        <a href="/hotels/russia/sochi"
+           class="orange-underline hotel-page__all">
+            <svg fill="none" width="24" height="14">
+                <use href="/images/icons/sprite.svg#arrow-right"></use>
+            </svg>
+            Смотреть все туры
+        </a>
+
+        
+<ul class="link-underline brd-crmbs"><li><a href="/">Главная</a></li><li><svg fill="none" width="6" height="12"><use href="/images/icons/sprite.svg#brd-crmbs"></use></svg> <a href="/hotels/russia">Туры Италии</a></li><li><svg fill="none" width="6" height="12"><use href="/images/icons/sprite.svg#brd-crmbs"></use></svg> <a href="/hotels/russia/sochi">Туры Флоренции</a></li><li><svg fill="none" width="6" height="12"><use href="/images/icons/sprite.svg#brd-crmbs"></use></svg> Название тура</li></ul>
+        <aside>
+            <div id="cnt_rb_245844" class="cnt32_rl_bg_str" data-id="245844"></div>
+<br>
+            <div id="hotel-search-aside" class="hotels-search hotels-search--side corner-radius-two-50">
+                <div class="hotels-search__title">Куда вы хотите поехать?</div>
+                <form id="reservation-form" class="hotels-search-form bg-form" action="/hotels-ajax/set-reservation-params" method="post" data-url="/hotels-ajax/search-hotels-data" target="">
+<input type="hidden" name="_csrf-frontend" value="v7GEH0XZeINMb967f_o6yQS6mNihbLgxMOS61rupbWSNgvNFFKEPsnoVpMIliwiefNeplOQuiAhSyd2diJsjDw==">
+<input type="hidden" id="h-regiontype" name="h[regionType]" value="1">
+<input type="hidden" id="h-region" name="h[region]" value="58365">
+    <div class="hotels-search__mob100p" id="search-hotels">
+                <input class="hotels-search__item search-text" value="Сочи, Россия" placeholder="Город, страна или отель"
+               style="border-left: none">
+        <div id="search-results">
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+                <input type="text" id="h-checkin" class="hotels-datepicker hotels-search__item" name="h[checkIn]" value="Ср, 07.09" readonly placeholder="Туда" data-title="Выберите дату заезда" autocomplete="off">    </div>
+
+    <div>
+                <input type="text" id="h-checkout" class="hotels-datepicker hotels-search__item" name="h[checkOut]" value="Ср, 14.09" readonly placeholder="Обратно" data-title="Выберите дату отъезда" autocomplete="off">    </div>
+
+    <div class="dropdown hotels-search__mob100p">
+                <div class="dropdown__btn hotels-search__item">
+            <div class="rc-count-data">
+                <span class="text-nowrap">2 взрослых,</span> <span class="text-nowrap">
+                    0 детей                </span>
+            </div>
+            <svg fill="none" width="14" height="8" class="dropdown__caret">
+                <use href="/images/icons/sprite.svg#caret-dropdown"></use>
+            </svg>
+        </div>
+
+        <div class="dropdown__content">
+            <div class="hotels-search__adults">
+                <p>Взрослые</p>
+                <div class="input-number">
+                    <span class="input-minus">-</span>
+                    <input type="text" id="h-adultscount" name="h[adultsCount]" value="2">                    <span class="input-plus">+</span>
+                </div>
+            </div>
+
+                        <div class="collapse hotels-search__add-child">
+                <div class="collapse__btn">
+                    Добавить ребенка
+                    <svg fill="none" width="14" height="8" class="collapse__caret">
+                        <use href="/images/icons/sprite.svg#caret-dropdown"></use>
+                    </svg>
+                </div>
+                <div class="collapse__content">
+                    <div class="column" style="max-height: 200px; overflow-y: scroll">
+                        
+                                                            <span data-val="0" class="children-selector">до 1 года </span>
+                            
+                        
+                                                            <span data-val="1" class="children-selector">
+                                                                                    1 год                                                                            </span>
+                            
+                        
+                                                            <span data-val="2" class="children-selector">
+                                                                                    2 года                                                                            </span>
+                            
+                        
+                                                            <span data-val="3" class="children-selector">
+                                                                                    3 года                                                                            </span>
+                            
+                        
+                                                            <span data-val="4" class="children-selector">
+                                                                                    4 года                                                                            </span>
+                            
+                        
+                                                            <span data-val="5" class="children-selector">
+                                                                                    5 лет                                                                            </span>
+                            
+                        
+                                                            <span data-val="6" class="children-selector">
+                                                                                    6 лет                                                                            </span>
+                            
+                        
+                                                            <span data-val="7" class="children-selector">
+                                                                                    7 лет                                                                            </span>
+                            
+                        
+                                                            <span data-val="8" class="children-selector">
+                                                                                    8 лет                                                                            </span>
+                            
+                        
+                                                            <span data-val="9" class="children-selector">
+                                                                                    9 лет                                                                            </span>
+                            
+                        
+                                                            <span data-val="10" class="children-selector">
+                                                                                    10 лет                                                                            </span>
+                            
+                        
+                                                            <span data-val="11" class="children-selector">
+                                                                                    11 лет                                                                            </span>
+                            
+                        
+                                                            <span data-val="12" class="children-selector">
+                                                                                    12 лет                                                                            </span>
+                            
+                        
+                                                            <span data-val="13" class="children-selector">
+                                                                                    13 лет                                                                            </span>
+                            
+                        
+                                                            <span data-val="14" class="children-selector">
+                                                                                    14 лет                                                                            </span>
+                            
+                        
+                                                            <span data-val="15" class="children-selector">
+                                                                                    15 лет                                                                            </span>
+                            
+                        
+                                                            <span data-val="16" class="children-selector">
+                                                                                    16 лет                                                                            </span>
+                            
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="submit" class="btn-orange hotels-search__mob100p" value="Найти отели">
+
+</form>            </div>
+
+            <!--        <div class="corner-radius-two-50 answer-questions">-->
+            <!--            <div class="answer-questions__title">Отвечаем на вопросы</div>-->
+            <!--            <p>Про отель, условия проживания, транспорт, цены и многое другое. Спрашивайте!</p>-->
+            <!--            <a href="#" class="orange-underline">Задать вопрос</a>-->
+            <!--            <svg fill="none" width="49" height="52">-->
+            <!--                <use href="/images/icons/sprite.svg#answer-questions"></use>-->
+            <!--            </svg>-->
+            <!--        </div>-->
+
+            <br>
+
+            <!-- <div class="ads-aside-hide">
+                <br><script src="https://c24.travelpayouts.com/content?promo_id=2458&shmarker=12822&trs=21443&countries=Россия&background=%23ffe100&hide_title=false&hide_logos=true&input_titles=false&powered_by=true" charset="utf-8" async></script>            </div>
+
+            <div class="ads-aside-hide">
+                <br><script src="//tp.media/content?promo_id=4480&shmarker=12822&campaign_id=10&trs=21443&locale=ru&powered_by=true&border_radius=5&plain=false&show_logo=false&color_background=%23ffca28&color_button=%230D53DE&color_text=%23000000&color_input_text=%23000000&color_button_text=%23ffffff&default_pick_up_location=Россия" charset="utf-8"></script>            </div> -->
+
+            <br>
+
+            <div id="cnt_rb_245845" class="cnt32_rl_bg_str" data-id="245845"></div>
+<br>        </aside>
+
+        <main>
+            <div class="hotels-h1" style="display: flex">
+                <h1 class="hotels-h1">Название тура</h1>
+                <div class="hotels__wrapper-stars">
+                    <div class="hotels__wrapper-stars-item"><img src="images/icon/star.svg" alt="start"></div>
+                    <div class="hotels__wrapper-stars-item"><img src="images/icon/star.svg" alt="star"></div>
+                    <div class="hotels__wrapper-stars-item"><img src="images/icon/star.svg" alt="star"></div>
+                    <div class="hotels__wrapper-stars-item"><img src="images/icon/star.svg" alt="star"></div>
+                    <div class="hotels__wrapper-stars-item"><img src="images/icon/star.svg" alt="star"></div>
+                </div>
+            </div>
+
+            <header class="hotel-header">
+                                <!--            <p class="green">Удобное расположение</p>-->
+                <!-- <div class="hotel-price-options">
+                                            от 3 300 руб
+                </div> -->
+                <div class="hotel__header-special-wrapper">
+                    <div class="hotel__header-special-wrapper-item hoter__header-special-wrapper-item-rate">
+                        <div class="hoter__header-special-item-rate">
+                            <span class="hoter__header-special-item-rate-span">8.5</span>
+                            <div class="hoter__header-special-item-rate-div">Хорошо</div>
+                        </div>
+                    </div>
+                    <div class="hotel__header-special-wrapper-item">
+                        <img src="images/icon/date.svg" alt="">
+                        Раннее бронирование
+                    </div>
+                    <div class="hotel__header-special-wrapper-item">
+                        <img src="images/icon/fire.svg" alt="">
+                        Горящее предложение
+                    </div>
+                    <div class="hotel__header-special-wrapper-item">
+                        <img src="images/icon/time.svg" alt="">
+                        Мгновенное подтверждение
+                    </div>
+                </div>
+                <div class="hotel-header__placement">
+                    <div class="hotel-placement">
+                        Италия, Флоренция <span>SPA Отель</span>
+                        <p></p>
+                    </div>
+                    <div class="hoter-header__options">6 вариантов от 76 546 руб</div>
+                    <a href="#hotel-page-price" class="btn-orange hotel-page-anchor">Купить тур</a>
+                </div>
+            </header>
+
+            <div class="mt-30 hotel-top-sticky hotel-menu">
+                <div class="hotel-menu__content">
+                    <a href="#hotel-page-foto" class="hotel-page-anchor">Фото</a>
+                                            <a href="#hotel-page-price" class="hotel-page-anchor">Цены на номера</a>
+                    
+                    <a href="#hotel-page-comments" class="hotel-page-anchor">Отзывы</a>
+
+                    <a href="#hotel-page-map" class="hotel-page-anchor">Карта</a>
+                    <!--                <a href="#hotel-page-about" class="hotel-page-anchor">Об отеле</a>-->
+                </div>
+            </div>
+
+            <div id="hotel-page-foto" class="mt-40 swiper-nav-wrapper" data-swiper-custom-nav='swiperHotelPage'>
+                <div class="swiper swiper-hotel-page">
+                    <div class="swiper-wrapper">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/622fa0cb55de14abf2330f39c12e376d.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/9349c18b149aab64d3d00a93324e2582.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/140abd7bbdb9a063fd578ca14a7b38a8.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/973a1b37c8205b4b59832ec819ffd0fb.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/118402d97ca3c4bed292fa7cfa440af4.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/48b5b60b776bbfdd6b12b915f96df6cd.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/04ef70b7898f4aa84abb5d89a3058dfc.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/ee73a1cb765a5223b9077b815b7cda8c.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/4cb3ff29f433fb55a9ad1e7ab5fb35ec.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/3cd859cfd1e91baaf3862a7de5b5eba8.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/728bea9069ffb8dfd9efe28667074da0.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/dbfd93afa4dad79aa78766ba06268e45.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/b594c684056a8ff0d076feea9179fcf8.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/3f90b6d90bbcaf638d6f512f5137d0e8.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                                    <img data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/7a2beec047b57cd3f1c389b9743fbc75.jpg" class="swiper-slide lozad" alt="" data-fancybox="gl"
+                                 style="cursor: pointer">
+                                            </div>
+                </div>
+                <button class="swiper-custom-btn swiper-custom-btn--prev">
+                    <svg fill="none" width="9" height="18">
+                        <use href="/images/icons/sprite.svg#swiper-nav"></use>
+                    </svg>
+                </button>
+                <button class="swiper-custom-btn swiper-custom-btn--next">
+                    <svg fill="none" width="9" height="18">
+                        <use href="/images/icons/sprite.svg#swiper-nav"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="swiper swiper-hotel-page-thumbs">
+                <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/622fa0cb55de14abf2330f39c12e376d.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/9349c18b149aab64d3d00a93324e2582.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/140abd7bbdb9a063fd578ca14a7b38a8.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/973a1b37c8205b4b59832ec819ffd0fb.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/118402d97ca3c4bed292fa7cfa440af4.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/48b5b60b776bbfdd6b12b915f96df6cd.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/04ef70b7898f4aa84abb5d89a3058dfc.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/ee73a1cb765a5223b9077b815b7cda8c.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/4cb3ff29f433fb55a9ad1e7ab5fb35ec.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/3cd859cfd1e91baaf3862a7de5b5eba8.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/728bea9069ffb8dfd9efe28667074da0.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/dbfd93afa4dad79aa78766ba06268e45.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/b594c684056a8ff0d076feea9179fcf8.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/3f90b6d90bbcaf638d6f512f5137d0e8.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://bronevik.com/static/photo/g/1000x800a/7a2beec047b57cd3f1c389b9743fbc75.jpg" alt=""></div>
+                                    </div>
+            </div>
+
+            <div class="mt-40 hotel-subtitle">
+                <span>Услуги и удобства</span>
+                <a href="#hotel-page-map" class="link-underline hotel-page-ancho">все удобства (65)</a>
+            </div>
+            <ul class="hotel-services-tours__wrapper">
+                <li class="hotel-services-tours__wrapper-items">
+                    <div class="hotel-services-tours__wrapper-item">
+                        <div class="hotel-services-tours__wrapper-item-text">
+                            100
+                            <br>
+                            <div>метров</div>
+                        </div>
+                    </div>
+                    <div class="hotel-services-tours__wrapper-item-text-sub">до пляжа</div>
+                </li>
+                <li class="hotel-services-tours__wrapper-items">
+                    <div class="hotel-services-tours__wrapper-item">
+                        <div class="hotel-services-tours__wrapper-item-text">
+                            <img src="images/icon/umbrella.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="hotel-services-tours__wrapper-item-text-sub">близко к пляжу</div>
+                </li>
+                <li class="hotel-services-tours__wrapper-items">
+                    <div class="hotel-services-tours__wrapper-item">
+                        <div class="hotel-services-tours__wrapper-item-text">
+                            <img src="images/icon/baby.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="hotel-services-tours__wrapper-item-text-sub">отдых с детьми</div>
+                </li>
+                <li class="hotel-services-tours__wrapper-items">
+                    <div class="hotel-services-tours__wrapper-item">
+                        <div class="hotel-services-tours__wrapper-item-text">
+                            <img src="images/icon/air conditioner.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="hotel-services-tours__wrapper-item-text-sub">кондиционер</div>
+                </li>
+                <li class="hotel-services-tours__wrapper-items">
+                    <div class="hotel-services-tours__wrapper-item">
+                        <div class="hotel-services-tours__wrapper-item-text">
+                            <img src="images/icon/wi-fi.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="hotel-services-tours__wrapper-item-text-sub">интернет</div>
+                </li>
+                <li class="hotel-services-tours__wrapper-items">
+                    <div class="hotel-services-tours__wrapper-item">
+                        <div class="hotel-services-tours__wrapper-item-text">
+                            <img src="images/icon/beach.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="hotel-services-tours__wrapper-item-text-sub">песчанный пляж</div>
+                </li>
+            </ul>
+            <div class="mt-40 hotel-subtitle">
+                <span>Расположение</span>
+                <a href="#hotel-page-map" class="link-underline hotel-page-ancho">Что находится рядом?</a>
+            </div>
+            <ul class="hotel-services hotel-services--no-marker">
+                                <li>
+                    <svg fill="none" width="15" height="15">
+                        <use href="/images/icons/sprite.svg#home"></use>
+                    </svg>
+                    До центра Флоренции: 350м
+                </li>
+            </ul>
+
+            <br>
+            <br>
+
+            <br><script charset="utf-8" src="//www.travelpayouts.com/widgets/0631b973da47bfe967eb1d1e571a5887.js?v=2263" async></script>
+
+                            <section id="hotel-page-price" class="bordered-top hotel-price">
+                    <div class="hotels-h3 hotels-h3--flex">
+                        <p>Цены на номера</p>
+                        <small>Забронировать отель можно только на сайтах-партнерах Votpusk.ru</small>
+                    </div>
+
+                    <form class="hotels-search-form hotels-search-form--price sm-form" action="/hotels-ajax/get-hotel-rooms?hotelID=2810414" method="post">
+<input type="hidden" name="_csrf-frontend" value="v7GEH0XZeINMb967f_o6yQS6mNihbLgxMOS61rupbWSNgvNFFKEPsnoVpMIliwiefNeplOQuiAhSyd2diJsjDw==">                    <div>
+                        <input required class="hotels-datepicker hotels-search__item" placeholder="Туда"
+                               data-title='Выберите дату заезда' readonly name="checkIn" value="Ср, 07.09">
+                    </div>
+                    <div>
+                        <input required class="hotels-datepicker hotels-search__item" placeholder="Обратно"
+                               data-title="Выберите дату отъезда" readonly name="checkOut" value="Ср, 14.09">
+                    </div>
+
+                    <div class="dropdown hotels-search__mob100p">
+                        <div class="dropdown__btn hotels-search__item">
+                            <div class="rc-count-data">
+                                <span class="text-nowrap">2 взрослых,</span> <span class="text-nowrap">0 детей</span>
+                            </div>
+                            <svg fill="none" width="14" height="8" class="dropdown__caret">
+                                <use href="/images/icons/sprite.svg#caret-dropdown"></use>
+                            </svg>
+                        </div>
+
+                        <div class="dropdown__content">
+                            <div class="hotels-search__adults">
+                                <p>Взрослые</p>
+                                <div class="input-number">
+                                    <span class="input-minus sm">-</span>
+                                    <input type="text" class="adultscount" name="adultsCount" value="2">                                    <span class="input-plus sm">+</span>
+                                </div>
+                            </div>
+
+                            <div class="collapse hotels-search__add-child">
+                                <div class="collapse__btn">
+                                    Добавить ребенка
+                                    <svg fill="none" width="14" height="8" class="collapse__caret">
+                                        <use href="/images/icons/sprite.svg#caret-dropdown"></use>
+                                    </svg>
+                                </div>
+                                <div class="collapse__content">
+                                    <div class="column" style="max-height: 200px; overflow-y: scroll">
+                                        
+                                                                                            <span class="children-selector  sm"
+                                                      data-val="0">до 1 года </span>
+                                            
+                                        
+                                                                                            <span data-val="1" class="children-selector sm">
+                                                                                    1 год                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="2" class="children-selector sm">
+                                                                                    2 года                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="3" class="children-selector sm">
+                                                                                    3 года                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="4" class="children-selector sm">
+                                                                                    4 года                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="5" class="children-selector sm">
+                                                                                    5 лет                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="6" class="children-selector sm">
+                                                                                    6 лет                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="7" class="children-selector sm">
+                                                                                    7 лет                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="8" class="children-selector sm">
+                                                                                    8 лет                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="9" class="children-selector sm">
+                                                                                    9 лет                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="10" class="children-selector sm">
+                                                                                    10 лет                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="11" class="children-selector sm">
+                                                                                    11 лет                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="12" class="children-selector sm">
+                                                                                    12 лет                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="13" class="children-selector sm">
+                                                                                    13 лет                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="14" class="children-selector sm">
+                                                                                    14 лет                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="15" class="children-selector sm">
+                                                                                    15 лет                                                                            </span>
+                                            
+                                        
+                                                                                            <span data-val="16" class="children-selector sm">
+                                                                                    16 лет                                                                            </span>
+                                            
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn-blue hotels-search__mob100p" value="проверить наличие мест">
+                    </form>
+                    <a class="btn-blue hotel-search-mob" data-fancybox='edit-date' data-src="#edit-date">Поменять даты
+                        или
+                        кол-во гостей</a>
+
+                    <div class="mt-30 hotel-price__show">
+                        <p>Цены:</p>
+                        <div class="add-active">
+                            <div class="add-active__item active" data-type="day">за ночь</div>
+                            <div class="add-active__item" data-type="week">за все ночи</div>
+                        </div>
+                        <a href="#" class="link hotel-price__reload">
+                            <svg fill="none" width="20" height="20">
+                                <use href="/images/icons/sprite.svg#reload"></use>
+                            </svg>
+                            <span>Обновить цены</span>
+                        </a>
+
+
+                    </div>
+                    <div class="hotels-notification--progress mt-30" style="display: none">
+                        <div class="hotels-notification__progress-scale"><span></span></div>
+                    </div>
+                    <div id="rooms-prop">
+
+                        <p style="color: red; margin-top: 20px">На период c 07 по 14 сентября не найдено свободных номеров.
+                                Выберите
+                                другие даты!
+                        </p>
+                    </div>
+                </section>
+            
+                            <section id="hotel-page-comments" class="bordered-top hotel-comments" style="padding-top: 0px">
+                    <div class="reviews">
+
+                        <div class="reviews-block">
+                            <div class="reviews-header">
+                                <h3>Отзывы туристов</h3>
+                                <!-- <h6>Отзывов нет</h6> -->
+                                <a href="#" data-fancybox='' data-src="#send-comment">написать отзыв</a>
+                            </div>
+                            <!-- <h4>Вы отдыхали в отеле “Старая дача”?</h4>
+                            <p>Оставьте отзыв и он будет первым!</p> -->
+                            <div class="review__wrapper-block">
+                                <div class="review__wrapper-block-item">
+                                    <div class="review__wrapper-block-user">
+                                        <img src="images/icon/user.png" alt="user">
+                                        <div class="review__wrapper-block-user-name">Наташа</div>
+                                    </div>
+                                    <div class="review__wrapper-block-user-text">Чем понравился сервис оперативно, четко, легко разобраться. Я вообще люблю, когда все варианты в одном месте. Искала недорогой хостел для летнего отпуска.. Выбирала минут 10 и забронила чудесную комнат))</div>
+                                    <div class="review__wrapper-block-user-answer">Ответить</div>
+                                </div>
+                                <div class="review__wrapper-block-item">
+                                    <div class="review__wrapper-block-user">
+                                        <img src="images/icon/user.png" alt="user">
+                                        <div class="review__wrapper-block-user-name">Наташа</div>
+                                    </div>
+                                    <div class="review__wrapper-block-user-text">Чем понравился сервис оперативно, четко, легко разобраться. Я вообще люблю, когда все варианты в одном месте. Искала недорогой хостел для летнего отпуска.. Выбирала минут 10 и забронила чудесную комнат))</div>
+                                    <div class="review__wrapper-block-user-answer">Ответить</div>
+                                </div>
+                                <div class="review__wrapper-block-item">
+                                    <div class="review__wrapper-block-user">
+                                        <img src="images/icon/user.png" alt="user">
+                                        <div class="review__wrapper-block-user-name">Наташа</div>
+                                    </div>
+                                    <div class="review__wrapper-block-user-text">Чем понравился сервис оперативно, четко, легко разобраться. Я вообще люблю, когда все варианты в одном месте. Искала недорогой хостел для летнего отпуска.. Выбирала минут 10 и забронила чудесную комнат))</div>
+                                    <div class="review__wrapper-block-user-answer">Ответить</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                
+<div id="send-comment" class="modal">
+    <div class="reviewwrap">
+    <div class="hotels-h3">Оставить отзыв</div>
+    <form id="reviews-create" action="/hotels/reviews/create" method="post">
+<input type="hidden" name="_csrf-frontend" value="v7GEH0XZeINMb967f_o6yQS6mNihbLgxMOS61rupbWSNgvNFFKEPsnoVpMIliwiefNeplOQuiAhSyd2diJsjDw==">    <div class="reviews-stars">
+        <select id="reviews-stars" name="HotelsReviews[rating]" autocomplete="aff">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4" selected>4</option>
+<option value="5">5</option>
+</select>    </div>
+    <div class="form-group field-review_hotel_id">
+
+<input type="hidden" id="review_hotel_id" class="form-control" name="HotelsReviews[hotel_id]" value="2810414">
+
+<div class="help-block"></div>
+</div>    <div class="form-group field-hotelsreviews-username required">
+
+<input type="text" id="hotelsreviews-username" class="form-control mt-30" name="HotelsReviews[username]" placeholder="Ваше Имя*" autocomplete="off" aria-required="true">
+
+<div class="help-block"></div>
+</div>    <div class="form-group field-hotelsreviews-review required">
+
+<textarea id="hotelsreviews-review" class="form-control mt-30" name="HotelsReviews[review]" placeholder="Ваш отзыв*" aria-required="true"></textarea>
+
+<div class="help-block"></div>
+</div>    <div class="hotels-capcha">
+        <div class="form-group field-hotelsreviews-verifycode">
+
+<img id="hotelsreviews-verifycode-image" src="/site/captcha.asp?v=630f1f16757587.04287463" alt=""> <input type="text" id="hotelsreviews-verifycode" class="form-control" name="HotelsReviews[verifyCode]">
+
+<div class="help-block"></div>
+</div>    </div>
+    <input type="submit" class="btn-orange btn--small" value="Разместить">
+    </form>    </div>
+</div>
+<div id="comment-thanks" class="modal" style="width: auto;">
+    <div class="hotels-h3">Премного <span class="text-nowrap">благодарны :)</span></div>
+    <p>Ваш отзыв очень важен для нас и будет размещен на сервисе в самое ближайшее время!</p>
+    <button class="btn--small btn-orange">Хорошо</button>
+</div>
+
+            
+
+            <section id="hotel-page-map" class="bordered-top hotel-map">
+                <div class="hotels-h3 text-left">Что вокруг (<a target="_blank" href="staraya-dacha/map"
+                                                                style="color: var(--blue); font-weight: bold">карта</a>)
+                </div>
+                <p class="fsz-16-desktop">Италия, Флоренция</p>
+
+                <div id="hotel-map" class="mt-30" style="height: 260px"></div>
+
+                
+
+                <ul class="mt-30 hotel-page__two-cols">
+                                        <li class="hotel-page__two-cols-item">
+                        <svg fill="none" width="15" height="15">
+                            <use href="/images/icons/sprite.svg#home"></use>
+                        </svg>
+                        До центра Сочи:
+                        <mark class="highlighted-value">60 км.</mark>
+                    </li>
+                </ul>
+
+                            </section>
+
+            
+            <section class="bordered-top hotel-remember" id="hotel-page-about">
+                <div class="hotels-h3 text-left">Описание</div>
+
+                <div class="hotel__description">
+                    Хостел Plus Florence расположен в 10 минутах ходьбы от железнодорожного вокзала Санта-Мария-Новелла и в 1 км от собора Санта-Мария-дель-Фьоре. Гостям предоставляются частные и общие номера, а также бесплатный Wi-Fi на всей территории.
+                    <br>
+                    <br>
+Во всех частных и общих номерах хостела Plus Florence есть телевизор с
+...
+                </div>
+                <div class="hotel__description-more">Показать все описание <img src="images/icon/hotel__description-more.svg" alt=""></div>
+            </section>
+
+            <section id="hotel-page-comfort" class="bordered-top hotel-comfort">
+                <div class="hotels-h3 text-left">Все услуги и удобства</div>
+
+                <ul class="hotel-page__two-cols">
+                                            <li class="hotel-page__two-cols-item dopwrap">
+                                                <img src="images/icon/door hanger.svg" class="hotel-comfort__img" alt="">
+                            <div class="hotel-comfort__subtitle">Удобства в номере</div>
+
+                                                            <p>Кондиционер</p>
+                                                            <p>Холодильник</p>
+                                                            <p>Мини-бар</p>
+
+                                                    </li>
+
+                                            <li class="hotel-page__two-cols-item dopwrap">
+                                                <img src="images/icon/drink.svg" class="hotel-comfort__img" alt="">
+                            <div class="hotel-comfort__subtitle">Развлечения</div>
+
+                                                            <p>Бар</p>
+                                                            <p>Массаж</p>
+                                                            <p>Боулинг</p>
+
+                                                    </li>
+
+                                            <li class="hotel-page__two-cols-item dopwrap">
+                                                <img src="images/icon/special-menu.svg" class="hotel-comfort__img" alt="">
+                            <div class="hotel-comfort__subtitle">Специальное меню</div>
+
+                                                            <p>Транспорт в/из аэропорта</p>
+                                                            <p>Услуги прачечной</p>
+                                                            <p>Химчистка<span class="not-free">оплачивается отдельно</span></p>
+
+                                                    </li>
+
+                                            <li class="hotel-page__two-cols-item dopwrap">
+                                                <img src="images/icon/sport.svg" class="hotel-comfort__img" alt="">
+                            <div class="hotel-comfort__subtitle">Спорт</div>
+
+                                                            <p>Плавательный бассейн</p>
+                                                            <p>Спа и оздоровительный центр</p>
+                                                            <p>Сауна</p>
+
+                                                    </li>
+
+                                            <li class="hotel-page__two-cols-item dopwrap">
+                                                <img src="images/icon/bed.svg" class="hotel-comfort__img" alt="">
+                            <div class="hotel-comfort__subtitle">Услуги в отеле</div>
+
+                                                            <p>Ресторан</p>
+                                                            <p>Бесплатный WIFI</p>
+                                                            <p>Парковка<span class="free">Бесплатно</span></p>
+
+                                                    </li>
+
+
+                    
+                    
+                                    </ul>
+            </section>
+
+            <!-- <div class="ads-desktop-hide">
+                <br><script src="//tp.media/content?promo_id=4480&shmarker=12822&campaign_id=10&trs=21443&locale=ru&powered_by=true&border_radius=5&plain=false&show_logo=false&color_background=%23ffca28&color_button=%230D53DE&color_text=%23000000&color_input_text=%23000000&color_button_text=%23ffffff&default_pick_up_location=Россия" charset="utf-8"></script>            </div>
+
+            <br><script id="tripster-widget-113759" src="https://experience.tripster.ru/partner/widget.js?template=horizontal&order=top&width=100%25&num=3&version=2&partner=votpusk&script_id=tripster-widget-113759" async></script>        </main> -->
+    </div>
+
+    <div class="container">
+        
+
+<section class="bordered-top hotels-low-cost">
+    <div class="hotels-h3 hotels-h3--flex blue">
+
+        Дешевые отели в Сочи        <a target="_blank"
+           href="/hotels/russia/sochi"
+           class="link-underline">
+            Показать все
+            <svg fill="none" width="24" height="14" class="dropdown__caret">
+                <use href="/images/icons/sprite.svg#arrow-right"></use>
+            </svg>
+        </a>
+    </div>
+
+    <div class="swiper-nav-wrapper" data-swiper-custom-nav="swiperCheap">
+        <div class="swiper swiper-hotels-cheap">
+            <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                        <a target="_blank" href="/hotels/russia/sochi/guest-house-mishlen" class="swiper-hotels-cheap__img">
+                            <img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://photo.hotellook.com/image_v2/limit/8651831939/1000/800.jpg" alt="">
+                        </a>
+                        <a target="_blank" href="/hotels/russia/sochi/guest-house-mishlen"
+                           class="black-orange swiper-hotels-cheap__name">Гостевой дом «МишЛен»</a>
+                        <div class="swiper-hotels-cheap__comments">
+                            <div class="hotel-eval hotel-eval--good">
+                                <span>9.4</span>
+                            </div>
+                        </div>
+                        <mark>от 375 руб</mark>
+                    </div>
+                                    <div class="swiper-slide">
+                        <a target="_blank" href="/hotels/russia/sochi/holiday-apart-otel" class="swiper-hotels-cheap__img">
+                            <img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://photo.hotellook.com/image_v2/limit/9332593365/1000/800.jpg" alt="">
+                        </a>
+                        <a target="_blank" href="/hotels/russia/sochi/holiday-apart-otel"
+                           class="black-orange swiper-hotels-cheap__name">HOLIDAY АПАРТ-ОТЕЛЬ</a>
+                        <div class="swiper-hotels-cheap__comments">
+                            <div class="hotel-eval hotel-eval--good">
+                                <span>8.5</span>
+                            </div>
+                        </div>
+                        <mark>от 375 руб</mark>
+                    </div>
+                                    <div class="swiper-slide">
+                        <a target="_blank" href="/hotels/russia/sochi/gostevoi-dom-panorama" class="swiper-hotels-cheap__img">
+                            <img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://photo.hotellook.com/image_v2/limit/7513343725/1000/800.jpg" alt="">
+                        </a>
+                        <a target="_blank" href="/hotels/russia/sochi/gostevoi-dom-panorama"
+                           class="black-orange swiper-hotels-cheap__name">Гостевой дом Панорама</a>
+                        <div class="swiper-hotels-cheap__comments">
+                            <div class="hotel-eval hotel-eval--good">
+                                <span>7.1</span>
+                            </div>
+                        </div>
+                        <mark>от 450 руб</mark>
+                    </div>
+                                    <div class="swiper-slide">
+                        <a target="_blank" href="/hotels/russia/sochi/tur-service-guest-house" class="swiper-hotels-cheap__img">
+                            <img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://photo.hotellook.com/image_v2/limit/7510235512/1000/800.jpg" alt="">
+                        </a>
+                        <a target="_blank" href="/hotels/russia/sochi/tur-service-guest-house"
+                           class="black-orange swiper-hotels-cheap__name">Гостевой дом Тур Сервис</a>
+                        <div class="swiper-hotels-cheap__comments">
+                            <div class="hotel-eval hotel-eval--good">
+                                <span>8.6</span>
+                            </div>
+                        </div>
+                        <mark>от 450 руб</mark>
+                    </div>
+                                    <div class="swiper-slide">
+                        <a target="_blank" href="/hotels/russia/sochi/kivi" class="swiper-hotels-cheap__img">
+                            <img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://photo.hotellook.com/image_v2/limit/9469334948/1000/800.jpg" alt="">
+                        </a>
+                        <a target="_blank" href="/hotels/russia/sochi/kivi"
+                           class="black-orange swiper-hotels-cheap__name">Киви</a>
+                        <div class="swiper-hotels-cheap__comments">
+                            <div class="hotel-eval hotel-eval--good">
+                                <span>8.7</span>
+                            </div>
+                        </div>
+                        <mark>от 450 руб</mark>
+                    </div>
+                                    <div class="swiper-slide">
+                        <a target="_blank" href="/hotels/russia/sochi/gostevoi-dom-anna-mariya" class="swiper-hotels-cheap__img">
+                            <img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://photo.hotellook.com/image_v2/limit/9366543773/1000/800.jpg" alt="">
+                        </a>
+                        <a target="_blank" href="/hotels/russia/sochi/gostevoi-dom-anna-mariya"
+                           class="black-orange swiper-hotels-cheap__name">Гостевой дом Анна-Мария</a>
+                        <div class="swiper-hotels-cheap__comments">
+                            <div class="hotel-eval hotel-eval--good">
+                                <span>8.3</span>
+                            </div>
+                        </div>
+                        <mark>от 450 руб</mark>
+                    </div>
+                                    <div class="swiper-slide">
+                        <a target="_blank" href="/hotels/russia/sochi/gostevoi-dom-viktoriya" class="swiper-hotels-cheap__img">
+                            <img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://photo.hotellook.com/image_v2/limit/9685247213/1000/800.jpg" alt="">
+                        </a>
+                        <a target="_blank" href="/hotels/russia/sochi/gostevoi-dom-viktoriya"
+                           class="black-orange swiper-hotels-cheap__name">Гостевой дом Виктория</a>
+                        <div class="swiper-hotels-cheap__comments">
+                            <div class="hotel-eval hotel-eval--good">
+                                <span>9.4</span>
+                            </div>
+                        </div>
+                        <mark>от 525 руб</mark>
+                    </div>
+                                    <div class="swiper-slide">
+                        <a target="_blank" href="/hotels/russia/sochi/yakor" class="swiper-hotels-cheap__img">
+                            <img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://photo.hotellook.com/image_v2/limit/9399286807/1000/800.jpg" alt="">
+                        </a>
+                        <a target="_blank" href="/hotels/russia/sochi/yakor"
+                           class="black-orange swiper-hotels-cheap__name">Yakor</a>
+                        <div class="swiper-hotels-cheap__comments">
+                            <div class="hotel-eval hotel-eval--good">
+                                <span>9.1</span>
+                            </div>
+                        </div>
+                        <mark>от 525 руб</mark>
+                    </div>
+                                    <div class="swiper-slide">
+                        <a target="_blank" href="/hotels/russia/sochi/guest-house-elif" class="swiper-hotels-cheap__img">
+                            <img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://photo.hotellook.com/image_v2/limit/9379730635/1000/800.jpg" alt="">
+                        </a>
+                        <a target="_blank" href="/hotels/russia/sochi/guest-house-elif"
+                           class="black-orange swiper-hotels-cheap__name">Guest House Elif</a>
+                        <div class="swiper-hotels-cheap__comments">
+                            <div class="hotel-eval hotel-eval--good">
+                                <span>9</span>
+                            </div>
+                        </div>
+                        <mark>от 525 руб</mark>
+                    </div>
+                                    <div class="swiper-slide">
+                        <a target="_blank" href="/hotels/russia/sochi/gostevoi-dom-robinzon" class="swiper-hotels-cheap__img">
+                            <img class="lozad" data-src="/thumb.php?w=1000&h=800&s=https://photo.hotellook.com/image_v2/limit/9449937209/1000/800.jpg" alt="">
+                        </a>
+                        <a target="_blank" href="/hotels/russia/sochi/gostevoi-dom-robinzon"
+                           class="black-orange swiper-hotels-cheap__name">Гостевой дом Робинзон</a>
+                        <div class="swiper-hotels-cheap__comments">
+                            <div class="hotel-eval hotel-eval--good">
+                                <span>8.7</span>
+                            </div>
+                        </div>
+                        <mark>от 525 руб</mark>
+                    </div>
+                
+            </div>
+        </div>
+
+        <button class="swiper-custom-btn swiper-custom-btn--prev">
+            <svg fill="none" width="9" height="18">
+                <use href="/images/icons/sprite.svg#swiper-nav"></use>
+            </svg>
+        </button>
+        <button class="swiper-custom-btn swiper-custom-btn--next">
+            <svg fill="none" width="9" height="18">
+                <use href="/images/icons/sprite.svg#swiper-nav"></use>
+            </svg>
+        </button>
+    </div>
+
+    <a href="/hotels/russia/sochi"
+       class="link-underline hotels-low-cost__all">
+        Показать все
+        <svg fill="none" width="24" height="14" class="dropdown__caret">
+            <use href="/images/icons/sprite.svg#arrow-right"></use>
+        </svg>
+    </a>
+</section>
+
+    </div>
+
+    <script src="//code-ya.jivosite.com/widget/huukdYxnW8" async></script>
+
+    <div id="edit-date" class="modal">
+        <div class="hotels-h3">Изменить поиск</div>
+
+        <form class="hotels-search-form sm-form" action="/hotels-ajax/get-hotel-rooms?hotelID=2810414" method="post">
+<input type="hidden" name="_csrf-frontend" value="v7GEH0XZeINMb967f_o6yQS6mNihbLgxMOS61rupbWSNgvNFFKEPsnoVpMIliwiefNeplOQuiAhSyd2diJsjDw==">
+        <div>
+            <input required class="hotels-datepicker hotels-search__item" placeholder="Туда"
+                   data-title='Выберите дату заезда' readonly name="checkIn" value="Ср, 07.09">
+        </div>
+        <div>
+            <input required class="hotels-datepicker hotels-search__item" placeholder="Обратно"
+                   data-title="Выберите дату отъезда" readonly name="checkOut" value="Ср, 14.09">
+        </div>
+
+        <div class="dropdown hotels-search__mob100p">
+            <div class="dropdown__btn hotels-search__item">
+                <div class="rc-count-data">
+                    <span class="text-nowrap">2 взрослых,</span> <span class="text-nowrap">0 детей</span>
+                </div>
+                <svg fill="none" width="14" height="8" class="dropdown__caret">
+                    <use href="/images/icons/sprite.svg#caret-dropdown"></use>
+                </svg>
+            </div>
+
+            <div class="dropdown__content">
+                <div class="hotels-search__adults">
+                    <p>Взрослые</p>
+                    <div class="input-number">
+                        <span class="input-minus sm">-</span>
+                        <input type="text" class="adultscount" name="adultsCount" value="2">                        <span class="input-plus sm">+</span>
+                    </div>
+                </div>
+
+                <div class="collapse hotels-search__add-child">
+                    <div class="collapse__btn">
+                        Добавить ребенка
+                        <svg fill="none" width="14" height="8" class="collapse__caret">
+                            <use href="/images/icons/sprite.svg#caret-dropdown"></use>
+                        </svg>
+                    </div>
+                    <div class="collapse__content">
+                        <div class="column" style="max-height: 200px; overflow-y: scroll">
+                            
+                                                                    <span class="children-selector  sm" data-val="0">до 1 года </span>
+                                
+                            
+                                                                    <span data-val="1" class="children-selector sm">
+                                                                                    1 год                                                                            </span>
+                                
+                            
+                                                                    <span data-val="2" class="children-selector sm">
+                                                                                    2 года                                                                            </span>
+                                
+                            
+                                                                    <span data-val="3" class="children-selector sm">
+                                                                                    3 года                                                                            </span>
+                                
+                            
+                                                                    <span data-val="4" class="children-selector sm">
+                                                                                    4 года                                                                            </span>
+                                
+                            
+                                                                    <span data-val="5" class="children-selector sm">
+                                                                                    5 лет                                                                            </span>
+                                
+                            
+                                                                    <span data-val="6" class="children-selector sm">
+                                                                                    6 лет                                                                            </span>
+                                
+                            
+                                                                    <span data-val="7" class="children-selector sm">
+                                                                                    7 лет                                                                            </span>
+                                
+                            
+                                                                    <span data-val="8" class="children-selector sm">
+                                                                                    8 лет                                                                            </span>
+                                
+                            
+                                                                    <span data-val="9" class="children-selector sm">
+                                                                                    9 лет                                                                            </span>
+                                
+                            
+                                                                    <span data-val="10" class="children-selector sm">
+                                                                                    10 лет                                                                            </span>
+                                
+                            
+                                                                    <span data-val="11" class="children-selector sm">
+                                                                                    11 лет                                                                            </span>
+                                
+                            
+                                                                    <span data-val="12" class="children-selector sm">
+                                                                                    12 лет                                                                            </span>
+                                
+                            
+                                                                    <span data-val="13" class="children-selector sm">
+                                                                                    13 лет                                                                            </span>
+                                
+                            
+                                                                    <span data-val="14" class="children-selector sm">
+                                                                                    14 лет                                                                            </span>
+                                
+                            
+                                                                    <span data-val="15" class="children-selector sm">
+                                                                                    15 лет                                                                            </span>
+                                
+                            
+                                                                    <span data-val="16" class="children-selector sm">
+                                                                                    16 лет                                                                            </span>
+                                
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" class="btn-blue hotels-search__mob100p" value="проверить наличие мест">
+        </form>    </div>
+
+
+    
+<footer class="footer">
+    <div class="container">
+        <a class="page-up" href="#header">
+            <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_641_3083)">
+                    <rect width="60" height="60" rx="30" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 64 64)"
+                          fill="white"/>
+                </g>
+                <path d="M22.375 38.95L34.1875 29.5L46 38.95" stroke="#200E32" stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+                <defs>
+                    <filter id="filter0_d_641_3083" x="0" y="0" width="68" height="68" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                       values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                       result="hardAlpha"/>
+                        <feOffset/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_641_3083"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_641_3083" result="shape"/>
+                    </filter>
+                </defs>
+            </svg>
+        </a>
+
+        <ul class="footer-menu"><li><span class="footer-title">Страны</span>
+<ul class='footer-submenu'>
+<li><a href="/country/country.asp?CN=AB1">Абхазия</a></li>
+<li><a href="/country/country.asp?CN=HU">Венгрия</a></li>
+<li><a href="/country/country.asp?CN=GI">Грузия</a></li>
+<li><a href="/country/country.asp?CN=NL">Нидерланды</a></li>
+<li><a href="/country/country.asp?CN=FI">Финляндия</a></li>
+<li><a href="/country/country.asp?CN=CH">Швейцария</a></li>
+<li><a href="/country/country.asp?CN=AT">Австрия</a></li>
+<li><a href="/country/country.asp?CN=DE">Германия</a></li>
+<li><a href="/country/country.asp?CN=CN">Китай</a></li>
+<li><a href="/country/country.asp?CN=SK">Словакия</a></li>
+<li><a href="/country/country.asp?CN=FR">Франция</a></li>
+<li><a href="/country/country.asp?CN=EE">Эстония</a></li>
+</ul>
+</li>
+<li><span class="footer-title">Города и курорты</span>
+<ul class='footer-submenu'>
+<li><a href="/country/kurort.asp?CN=NL&amp;CT=NL01">Амстердам</a></li>
+<li><a href="/country/kurort.asp?CN=CH&amp;CT=CH04">Женева</a></li>
+<li><a href="/country/kurort.asp?CN=FR&amp;CT=FR03">Куршевель</a></li>
+<li><a href="/country/kurort.asp?CN=FR&amp;CT=FR02">Ницца</a></li>
+<li><a href="/country/kurort.asp?CN=LV&amp;CT=LV05">Рига</a></li>
+<li><a href="/country/kurort.asp?CN=HU&amp;CT=HU11">Хевиз</a></li>
+<li><a href="/country/kurort.asp?CN=DE&amp;CT=DE01">Берлин</a></li>
+<li><a href="/country/kurort.asp?CN=AT&amp;CT=AT02">Зальцбург</a></li>
+<li><a href="/country/kurort.asp?CN=FR&amp;CT=FR21">Марсель</a></li>
+<li><a href="/country/kurort.asp?CN=CN&amp;CT=CN01">Пекин</a></li>
+<li><a href="/country/kurort.asp?CN=GI&amp;CT=GI0002">Тбилиси</a></li>
+<li><a href="/country/kurort.asp?CN=CH&amp;CT=CH03">Цюрих</a></li>
+</ul>
+</li>
+<li><span class="footer-title">Сезоны</span>
+<ul class='footer-submenu'>
+<li><a href="/story/article.asp?ID=19209">Январь</a></li>
+<li><a href="/story/article.asp?ID=19226">Март</a></li>
+<li><a href="/story/article.asp?ID=19234">Май</a></li>
+<li><a href="/story/article.asp?ID=19249">Июль</a></li>
+<li><a href="/story/article.asp?ID=19269">Сентябрь</a></li>
+<li><a href="/story/article.asp?ID=19273">Ноябрь</a></li>
+<li><a href="/story/article.asp?ID=19215">Февраль</a></li>
+<li><a href="/story/article.asp?ID=19233">Апрель</a></li>
+<li><a href="/story/article.asp?ID=19237">Июнь</a></li>
+<li><a href="/story/article.asp?ID=19263">Август</a></li>
+<li><a href="/story/article.asp?ID=19271">Октябрь</a></li>
+<li><a href="/story/article.asp?ID=19274">Декабрь</a></li>
+</ul>
+</li>
+<li><span class="footer-title">Виды отдыха</span>
+<ul class='footer-submenu'>
+<li><a href="/toursr_prof.asp?TP=OTD">Пляжный отдых</a></li>
+<li><a href="/toursr_prof.asp?TP=EXC">Экскурсионные туры</a></li>
+<li><a href="/toursr_prof.asp?TP=ACT">Спорт. Активный отдых</a></li>
+<li><a href="/toursr_prof.asp?TP=SVB">Свадебные туры</a></li>
+<li><a href="/toursr_prof.asp?TP=SHP">Шоп-туры</a></li>
+<li><a href="/toursr_prof.asp?TP=PR">Туры на праздники</a></li>
+<li><a href="/train/all-number-trains">Расписание поездов по №</a></li>
+</ul>
+</li>
+<li><span class="footer-title">О проекте</span>
+<ul class='footer-submenu'>
+<li><a href="/about.asp">О Вотпуск.ру</a></li>
+<li><a href="/advertising.asp">Реклама на сайте</a></li>
+<li><a href="https://www.votpusk.ru/promokodi/">Промокоды</a></li>
+<li><a href="/sitemap.xml">Карта сайта</a></li>
+</ul>
+</li></ul>
+        <div class="footer__bottom">
+            <div>
+                <!--LiveInternet counter-->
+                <a href="https://www.liveinternet.ru/click"
+                   target="_blank"><img id="licntFC4C" width="88" height="31" style="border:0"
+                                        title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                                        alt=""/></a>
+                <script>(function (d, s) {
+                        d.getElementById("licntFC4C").src =
+                            "https://counter.yadro.ru/hit?t14.1;r" + escape(d.referrer) +
+                            ((typeof (s) == "undefined") ? "" : ";s" + s.width + "*" + s.height + "*" +
+                                (s.colorDepth ? s.colorDepth : s.pixelDepth)) + ";u" + escape(d.URL) +
+                            ";h" + escape(d.title.substring(0, 150)) + ";" + Math.random()
+                    })
+                    (document, screen)</script>
+                <!--/LiveInternet-->
+            </div>
+
+            <div class="footer__policy">
+                <p class="footer__policy-text">Copyright 1999-2022 © "В ОТПУСК.РУ" Все права защищены</p>
+                <p class="footer__policy-text">При использовании материалов активная ссылка на сайт обязательна</p>
+            </div>
+
+            <div class="footer__socials">
+                <a class="footer__social" href="https://vk.com/v_otpusk" target="_blank">
+                    <img class="footer__social-icon" src="/img/footer/vk.svg"
+                         alt="Ссылка на социальную сеть vkontakte">
+                </a>
+                <a class="footer__social" href="https://zen.yandex.ru/votpusk.ru" target="_blank">
+                    <img class="footer__social-icon" src="/images/zen.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <a href="#page-header" class="hotels-up">
+        <svg fill="none" width="28" height="14">
+            <use href="/images/icons/sprite.svg#up"></use>
+        </svg>
+    </a>
+        <!-- <script src="/assets/aefc652d/jquery.js"></script>
+<script src="/assets/51d339c4/yii.js"></script>
+<script src="/assets/51d339c4/yii.activeForm.js"></script>
+<script src="/assets/51d339c4/yii.validation.js"></script>
+<script src="/assets/51d339c4/yii.captcha.js"></script> -->
+
+<!-- <script src="code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script> -->
+<script src="js/jquery.barrating.min.js"></script> 
+<script
+  src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+  integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+  crossorigin="anonymous"></script>
+ 
+<script src="js/main.js"></script>
+<script src="js/hotels.js"></script>
+<script src="js/hotels-common.js"></script>
+<script>$('#reviews-stars').barrating({
+        theme: 'css-stars',
+        showSelectedRating: false
+    });</script> -->
+ <script>jQuery(function ($) {
+jQuery('#reservation-form').yiiActiveForm([], []);
+jQuery('#hotelsreviews-verifycode-image').yiiCaptcha({"refreshUrl":"\/site\/captcha.asp?refresh=1","hashKey":"yiiCaptcha\/site\/captcha"});
+jQuery('#reviews-create').yiiActiveForm([{"id":"hotelsreviews-hotel_id","name":"hotel_id","container":".field-review_hotel_id","input":"#review_hotel_id","validate":function (attribute, value, messages, deferred, $form) {yii.validation.number(value, messages, {"pattern":/^[+-]?\d+$/,"message":"Значение «Id Отеля» должно быть целым числом.","skipOnEmpty":1});}},{"id":"hotelsreviews-username","name":"username","container":".field-hotelsreviews-username","input":"#hotelsreviews-username","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Имя»."});yii.validation.string(value, messages, {"message":"Значение «Имя» должно быть строкой.","max":255,"tooLong":"Значение «Имя» должно содержать максимум 255 символов.","skipOnEmpty":1});}},{"id":"hotelsreviews-review","name":"review","container":".field-hotelsreviews-review","input":"#hotelsreviews-review","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Отзыв»."});yii.validation.string(value, messages, {"message":"Значение «Отзыв» должно быть строкой.","skipOnEmpty":1});}},{"id":"hotelsreviews-verifycode","name":"verifyCode","container":".field-hotelsreviews-verifycode","input":"#hotelsreviews-verifycode","validate":function (attribute, value, messages, deferred, $form) {yii.validation.captcha(value, messages, {"hash":6465,"hashKey":"yiiCaptcha/site/captcha","caseSensitive":false,"message":"Неправильный проверочный код."});}}], {"validationUrl":"\/hotels\/reviews"});
+
+                $('.hotel-price__reload').trigger('click');
+
+
+    const observer = lozad(); observer.observe();
+    
+});</script>    
+
+  </body>
+
+</html>
