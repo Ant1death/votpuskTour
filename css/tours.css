@@ -1,13 +1,81 @@
+.hotel-header__options-btn {
+    background: #F8991D;
+    width: 150px;
+    height: 50px;
+    
+}
+.level__wrapper {
+    display: flex;
+    align-items: center;
+}
+.level__wrapper-btn {
+    width: 12px;
+    height: 12px;
+    margin-right: 12px;
+}
+.level__wrapper-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 3px;
+    color:rgba(151, 151, 151, 1);
+
+}
+.level-wrapper {
+    display: flex;
+    align-items: center;
+}
+.level-wrapper__item {
+    margin-right: 2px;
+    background: #C4C4C4;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+}
+.level-wrapper__item:nth-last-child(1) {
+    margin-right: 0px;
+}
+.level-wrapper__item.active {
+    background: #F8991D;
+}
+.hotel-header__options-btn-mobile {
+    display: none;
+}
+.hotel-header__options-btn-mobile>a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 15px 0 0 0;
+}
+.divider {
+    width: 100%;
+    border: 1px dashed #C4C4C4;
+}
 .hotel__header-special-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .hotel__header-special-wrapper-item {
-    margin-right: 10px;
+    margin-right: 20px;
     display: flex;
     align-items: center;
-    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #200E32;
 }
 .hotel__header-special-wrapper-item img{
     margin-right: 4px;
@@ -82,10 +150,21 @@
     font-size: 20px;
     line-height: 23px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    flex-direction: column;
     text-align: right;
     color: #0662BA;
     margin-right: 20px;
+}
+.hotel-header__options>span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    color: #200E32;
+    margin-top: 8px;
 }
 .hoter__header-special-item-rate{
     width: 99px;
@@ -241,7 +320,7 @@
 .review__wrapper-block-item-more img{
     margin-left: 10px;
 }
-.modal__review {
+.modal-review {
     position: fixed;
     top: 0;
     left: 0;
@@ -252,10 +331,10 @@
     overflow: hidden;
     background-color: rgba(0,0,0,.5);
 }
-.modal__review.show {
+.modal-review.show {
     display: block;
 }
-.modal__review.hide {
+.modal-review.hide {
     display: none;
 }
 .modal__review-item {
@@ -300,6 +379,12 @@
 }
 .modal__review-stars-item {
     margin-right: 3px;
+    width: 30px;
+    height: 28.5px;
+}
+.modal__review-stars-item>img {
+    width: 30px;
+    height: 28.5px;
 }
 .modal__review-text {
     margin-top: 15px;
@@ -371,7 +456,281 @@
     right: 20px;
     top: 20px;
 }
-.modal__tour {
+
+.type-hotel__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.type-hotel__item {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+.type-hotel__item:nth-last-child(1) {
+    margin-right: 0px;
+}
+.type-hotel__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    margin-right: 20px;
+}
+.type-hotel__subtitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+.type-hotel__subtitle-card {
+    background: #FCEFDF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #200E32;
+    padding: 8px 10px;
+}
+.type-hotel__text {
+    margin-top: 20px;
+}
+.type-hotel__text>p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #200E32;
+}
+.h3-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #200E32;
+}
+.date-group {
+    margin-top: 43px;
+}
+.date-group__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.date-group__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #200E32;
+}
+.date-group__subtitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #C4C4C4;
+}
+.date-group__wrapper {
+    margin-top: 10px;
+}
+.date-group__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.date-group__item-date-wrapper {
+    display: flex;
+}
+.date-group__dates {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #200E32;
+    margin-right: 110px;
+}
+.date-group__time {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #200E32;
+}
+.date-group__btn {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #F8991D;
+    width: 177px;
+    height: 40px;
+}
+.tour-program {
+    margin-top: 50px;
+}
+.tour-program__title {
+    margin-bottom: 30px;
+}
+.tour-program__item {
+    background: #EBF1FD;
+    border-radius: 0px 20px;
+    padding: 30px 20px 30px 30px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.tour-program__item-header {
+    display: flex;
+    align-items: center;
+}
+.tour-program__item-btn-wrapper {
+    position: absolute;
+    right: 30px;
+}
+.tour-program__item-btn.active {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+.tour-program__item-day {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #225999;
+    margin-right: 26px;
+}
+.tour-program__item-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #200E32;
+    
+}
+.tour-program__item-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #200E32;
+    margin-top: 20px;
+    display: none;
+}
+.tour-program__item-text.active {
+    display: block;
+}
+.important-info {
+    margin-top: 50px;
+}
+.important-info__item {
+    border: 1px dashed #225999;
+    border-radius: 0px 20px;
+    padding: 30px 48px 30px 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.important-info__item-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    align-items: center;
+    color: #225999;
+}
+.important-info__item-btn-wrapper {
+    height: 8px;
+}
+.important-info__item-btn {
+    height: 8px;
+}
+#hotel-page-comments {
+    margin-bottom: 50px;
+}
+.tour-price {
+    margin-top: 54px;
+}
+.tour-price__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 384px);
+    column-gap: 72px;
+}
+.tour-price__item {
+    display: grid;
+    grid-template-columns: 20px 280px;
+    column-gap: 10px
+}
+.tour-price__text-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #019947;
+    margin-bottom: 5px;
+}
+.tour-price__text-title-red {
+    color: #200E32;
+}
+.tour-price__icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.tour-price__text-description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #200E32;
+    margin-top: 20px;
+}
+.modal-level {
     position: fixed;
     top: 0;
     left: 0;
@@ -382,169 +741,68 @@
     overflow: hidden;
     background-color: rgba(0,0,0,.5);
 }
-.modal__tour.show {
+.modal-level.show {
     display: block;
 }
-.modal__tour.hide {
-    display: none;
-}
-.modal__tour-item {
+.modal__level-block {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 600px;
+    height: 423px;
     background: #FFFFFF;
     border-radius: 30px;
-    width: 735px;
-    height: 577px;
-    margin: 0 auto;
-    padding: 30px 26px 29px 30px;
+    padding: 30px;
 }
-.modal__tour-item-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 324px);
-    column-gap: 30px;
-}
-.modal__tour-right-title {
+.modal__level-title {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
     font-size: 30px;
     line-height: 35px;
-    display: flex;
-    align-items: center;
-    color: #0662BA;
-}
-.modal__tour-right-subtitle {
-    margin-top: 10px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
     color: #200E32;
-    margin-bottom: 12px;
+    text-align: center;
 }
-.modal__tour-right-type-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.modal__level-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
 }
-.modal__tour-right-type-wrapper-item-img {
-    margin-right: 10px;
+.modal__level-wrapper {
+    margin-top: 30px;
 }
-.modal__tour-right-type-wrapper-item {
+.modal__level-type {
     display: flex;
     align-items: center;
 }
-.modal__tour-right-type-wrapper-item span{
-    max-width: 118px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    color: #200E32;
-}
-.modal__tour-right-location-wrapper {
-    margin-top: 15px;
-}
-.modal__tour-right-location-wrapper-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-}
-.modal__tour-right-location-wrapper-item:nth-last-child(1) {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0px;
-    margin-top: 10px;
-}
-.modal__tour-right-location-wrapper-item-left {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #225999;
-}
-.modal__tour-right-location-wrapper-item-right {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: right;
-    color: #200E32;
-}
-.modal__tour-right-location-title {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #225999;
-    margin-top: 25px;
-}
-.modal__tour-left-img {
-    width: 324px;
-    height: 250px;
-}
-.modal__tour-left-images img {
-    width: 70px;
-    height: 80px;
-    border: 2px solid #F8991D;
-    border-radius: 0px;
-    margin-right: 10px;
-}
-.modal__tour-left-images {
-    margin-top: 10px;
-}
-.modal__tour-left-images img:nth-last-child(1){
-    margin-right: 0px;
-}
-.modal__tour-left-title {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    color: #019947;
-    margin-top: 20px;
-}
-.modal__tour-left-wrapper-price-items button {
-    width: 177px;
-    height: 50px;
-    background: #F8991D;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-.modal__tour-left-wrapper-price-item {
+.modal__level-type-name {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
-    color: #F8991D;
+    color: #0662BA;
+    margin-right: 19px;
 }
-.modal__tour-left-wrapper-price-item span {
+.modal__level-type-text {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    color: #200E32;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(151, 151, 151, 1);
+    margin-top: 1px;
 }
-.modal__tour-left-wrapper-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
+.modal__level-item {
+    margin-top: 30px;
+}
+@media (max-width: 1200px) {
+    .tour-price__wrapper {
+        grid-template-columns: repeat(2, 350px);
+        column-gap: 47px;
+    }
 }
 @media (max-width: 1024px) {
     .review__wrapper-block-item-more {
@@ -554,28 +812,33 @@
     }
 }
 @media (max-width: 768px) {
-    .modal__tour-item-wrapper {
-        display: flex;
-        flex-direction: column;
+
+    .modal__review-title {
+        font-size: 25px;
+        line-height: 29px;
     }
-    .modal__tour-item {
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-    }
-    
     .reviews-block {
         max-width: 100%;
+    }
+    .modal__level-block {
+        max-width: 100%;
+        min-height: 485px;
+    }
+    .modal__level-item {
+        margin-top: 20px;
+    }
+    .modal__level-title {
+        font-size: 25px;
+        line-height: 29px;
     }
     .hotel-header__options-mobile {
         font-size: 18px;
         line-height: 21px;
-        display: block;
+        display: flex;
         text-align: center;
         margin-top: 20px;
-    }
-    .hotel-header__options-mobile br{
-        display: none;
+        align-items: center;
+        margin-bottom: 20px;
     }
     .hotel-header__options-desktop {
         font-size: 18px;
@@ -590,10 +853,62 @@
     .hotel-subtitle {
         margin-bottom: 10px;
     }
-    
+    .tour-price__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tour-price__item {
+        margin-bottom: 30px;
+    }
 }
 @media(max-width: 576px) {
-    
+    .hotel-header__options-btn {
+        display: none;
+    }
+    .hotel-header__options-btn-mobile {
+        display: block;
+        width: 100%;
+        height: 50px;
+    }
+    .date-group__item-date-wrapper {
+        flex-direction: column;
+    }
+    .date-group__subtitle {
+        text-align: left;
+    }
+    .date-group__dates {
+        margin-right: 0px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .tour-program__item-day {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .tour-program__item-name {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .date-group__subtitle {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .date-group__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .type-hotel__text>p {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .date-group__title {
+        margin-bottom: 10px;
+    }
+    .date-group__time {
+        font-size: 14px;
+        line-height: 16px;
+    }
     .modal__review-item {
         width: 100%;
     }
@@ -610,6 +925,7 @@
     .hotel__header-special-wrapper {
         flex-wrap: wrap;
         align-items: flex-start;
+        justify-content: flex-start;
     }
     .hotel__header-special-wrapper-item {
         margin-top: 10px;
@@ -630,12 +946,7 @@
     .reviews .reviews-block a {
         width: 100%;
     }
-}
-@media (max-width: 420px) {
-    .modal__tour-left-img {
-        width: 240px;
-    }
-    .modal__tour-item {
-        padding: 30px 10px 30px 10px;
+    .type-hotel__item {
+        margin-bottom: 10px;
     }
 }

@@ -3,8 +3,12 @@ window.addEventListener('DOMContentLoaded', () => {
     // modal open
     const openReviewModalBtn = document.querySelector('[data-src="#send-comment"]'),
           exitReviewModalBtn = document.querySelectorAll('.modal__review-exit'),
-          modalReviewContent = document.querySelector('.modal__review'),
-          modalTourConent = document.querySelector('.modal__tour');
+          modalReviewContent = document.querySelector('.modal-review'),
+          openProgramBtn = document.querySelectorAll('.tour-program__item-btn'),
+          programContent = document.querySelectorAll('.tour-program__item-text'),
+          openLevelBtn = document.querySelector('.level__wrapper-btn'),
+          levelModal = document.querySelector('.modal-level'),
+          closeLevelBtn = document.querySelector('.modal__level-btn');
 
     openReviewModalBtn.addEventListener('click', (e) => {
         e.preventDefault;
@@ -17,39 +21,34 @@ window.addEventListener('DOMContentLoaded', () => {
             e.preventDefault;
             modalReviewContent.classList.remove('show');
             modalReviewContent.classList.add('hide');
-            modalTourConent.classList.remove('show');
-            modalTourConent.classList.add('hide');
             document.body.style.overflow = 'auto';
         })
     })
-
-    // modal toggle active btn
-
-    const submitBtn = document.querySelector('.modal__review-submit'),
-          nameInput = document.querySelector('.modal__review-name'),
-          textInput = document.querySelector('.modal__review-text'),
-          captchaInput = document.querySelector('.modal__review-captcha-input');
-
-    nameInput.addEventListener('change', () => {
-        if(nameInput.value !== '' && textInput.value !== '' && captchaInput.value !== '' ) {
-            submitBtn.classList.add('active');
-        } else {
-            submitBtn.classList.remove('active');
-        }
+    openLevelBtn.addEventListener('click', () => {
+        levelModal.classList.remove('hide');
+        levelModal.classList.add('show');
     })
-    textInput.addEventListener('change', () => {
-        if(nameInput.value !== '' && textInput.value !== '' && captchaInput.value !== '' ) {
-            submitBtn.classList.add('active');
-        } else {
-            submitBtn.classList.remove('active');
-        }
+    closeLevelBtn.addEventListener('click', () => {
+        levelModal.classList.remove('show');
+        levelModal.classList.add('hide');
     })
-    captchaInput.addEventListener('change', () => {
-        if(nameInput.value !== '' && textInput.value !== '' && captchaInput.value !== '' ) {
-            submitBtn.classList.add('active');
-        } else {
-            submitBtn.classList.remove('active');
-        }
+    function openProgramContent (i = 0) {
+        openProgramBtn[i].classList.add('active');
+        programContent[i].classList.add('active');
+    }
+    function closeProgramContent () {
+        
+        openProgramBtn.forEach((item => {
+            item.classList.remove('active');
+        }));
+        programContent.forEach((item => {
+            item.classList.remove('active')
+        }))
+    };
+    openProgramBtn.forEach((item,i) => {
+        item.addEventListener('click', () => {
+            closeProgramContent()
+            openProgramContent(i);
+        })
     })
-    
 });
