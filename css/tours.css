@@ -216,6 +216,12 @@
     padding: 30px 20px 40px 30px;
     margin-bottom: 20px;
 }
+.review__wrapper-block-item-sub {
+    display: none;
+}
+.review__wrapper-block-item-sub.active {
+    display: block;
+}
 .review__wrapper-block-user {
     display: flex;
     align-items:center
@@ -257,8 +263,19 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 19px;
-
     color: #200E32;
+}
+.hotel__subdescription {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #200E32;
+    display: none;
+}
+.hotel__subdescription.active {
+    display: block;
 }
 .hotel__description-more {
     font-family: 'Roboto';
@@ -271,6 +288,10 @@
     color: #F8991D;
     margin-top: 10px;
     cursor: pointer;
+}
+.hotel__description-more.active img{
+    transform: rotate(180deg);
+    transition: 0.5s;
 }
 .hotel__description-more img {
     margin-left: 10px;
@@ -316,6 +337,10 @@
     justify-content: flex-end;
     cursor: pointer;
     text-decoration: underline;
+}
+.review__wrapper-block-item-more.active img {
+    transform: rotate(180deg);
+    transition: 0.5s;
 }
 .review__wrapper-block-item-more img{
     margin-left: 10px;
@@ -665,10 +690,29 @@
     border-radius: 0px 20px;
     padding: 30px 48px 30px 30px;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 20px;
+}
+.important-info__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.important-info__item-text {
+    margin-top: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #200E32;
+    display: none;
+}
+.important-info__item-text.active{
+    display: block;
+}
+.important-info__item-btn.active {
+    transform: rotate(180deg);
+    transition: 0.5s;
 }
 .important-info__item-title {
     font-family: 'Roboto';
@@ -684,6 +728,7 @@
 }
 .important-info__item-btn {
     height: 8px;
+    
 }
 #hotel-page-comments {
     margin-bottom: 50px;
@@ -798,6 +843,14 @@
 .modal__level-item {
     margin-top: 30px;
 }
+.tour-program__item-btn {
+    width: 14px;
+    height: 8px;
+}
+.tour-program__item-btn-wrapper {
+    width: 14px;
+    height: 8px;
+}
 @media (max-width: 1200px) {
     .tour-price__wrapper {
         grid-template-columns: repeat(2, 350px);
@@ -809,6 +862,13 @@
         font-size: 14px;
         line-height: 16px;
 
+    }
+    .hotel__header-special-wrapper-item:nth-last-child(1) {
+        display: none;
+    }
+    .hotel-header__options {
+        font-size: 18px;
+        line-height: 21px;
     }
 }
 @media (max-width: 768px) {
@@ -831,20 +891,10 @@
         font-size: 25px;
         line-height: 29px;
     }
-    .hotel-header__options-mobile {
-        font-size: 18px;
-        line-height: 21px;
-        display: flex;
-        text-align: center;
-        margin-top: 20px;
-        align-items: center;
-        margin-bottom: 20px;
-    }
+    
     .hotel-header__options-desktop {
         font-size: 18px;
         line-height: 21px;
-        display: none;
-        
     }
     .hotel-services-tours__wrapper-items {
         margin-top: 20px;
@@ -863,6 +913,55 @@
     }
 }
 @media(max-width: 576px) {
+    .tour-program__item {
+        padding: 20px 20px 20px 20px;
+    }
+    .hotel-header__options-desktop {
+        display: none;
+    }
+    .date-group__btn {
+        width: 140px;
+        height: 40px;
+    }
+    .tour-program__item-btn-wrapper {
+        right: 20px;
+    }
+    .hotel__description {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .hotel__subdescription {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .important-info__item-title {
+        font-size: 17px;
+        line-height: 19px;
+    }
+    .important-info__item {
+        padding: 20px;
+    }
+    .important-info__item-text {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .review__wrapper-block-user-text {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .review__wrapper-block-user-answer {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .hotel-header__options-mobile {
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        text-align: center;
+        margin-top: 20px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
     .hotel-header__options-btn {
         display: none;
     }

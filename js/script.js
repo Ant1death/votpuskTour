@@ -8,7 +8,14 @@ window.addEventListener('DOMContentLoaded', () => {
           programContent = document.querySelectorAll('.tour-program__item-text'),
           openLevelBtn = document.querySelector('.level__wrapper-btn'),
           levelModal = document.querySelector('.modal-level'),
-          closeLevelBtn = document.querySelector('.modal__level-btn');
+          closeLevelBtn = document.querySelector('.modal__level-btn'),
+          tourDescriptionBtn = document.querySelector('.hotel__description-more'),
+          tourDescription = document.querySelector('.hotel__subdescription'),
+          personalItemsBtn = document.querySelectorAll('.important-info__item-btn'),
+          personaItemsText = document.querySelectorAll('.important-info__item-text'),
+          moreReviewsBtn = document.querySelector('.review__wrapper-block-item-more'),
+          moreReviewsContent = document.querySelectorAll('.review__wrapper-block-item-sub');
+
 
     openReviewModalBtn.addEventListener('click', (e) => {
         e.preventDefault;
@@ -33,8 +40,8 @@ window.addEventListener('DOMContentLoaded', () => {
         levelModal.classList.add('hide');
     })
     function openProgramContent (i = 0) {
-        openProgramBtn[i].classList.add('active');
-        programContent[i].classList.add('active');
+        openProgramBtn[i].classList.toggle('active');
+        programContent[i].classList.toggle('active');
     }
     function closeProgramContent () {
         
@@ -47,8 +54,48 @@ window.addEventListener('DOMContentLoaded', () => {
     };
     openProgramBtn.forEach((item,i) => {
         item.addEventListener('click', () => {
-            closeProgramContent()
-            openProgramContent(i);
+            if(item.classList.contains('active')) {
+                openProgramContent(i);
+                console.log('da');
+            } else {
+                closeProgramContent()
+                openProgramContent(i);
+                console.log('net');
+            }
+            
+        })
+    });
+    tourDescriptionBtn.addEventListener('click', () => {
+        tourDescription.classList.toggle('active');
+        tourDescriptionBtn.classList.toggle('active');
+    });
+    function openPersonalItems (i = 0) {
+        personalItemsBtn[i].classList.toggle('active');
+        personaItemsText[i].classList.toggle('active');
+    };
+    function closePersonalItems () {
+        
+        personalItemsBtn.forEach((item => {
+            item.classList.remove('active');
+        }));
+        personaItemsText.forEach((item => {
+            item.classList.remove('active')
+        }));
+    };
+    personalItemsBtn.forEach((item,i) => {
+        item.addEventListener('click', () => {
+            if(item.classList.contains('active')) {
+                openPersonalItems(i);
+            } else {
+                closePersonalItems()
+                openPersonalItems(i);
+            };
+        })
+    });
+    moreReviewsBtn.addEventListener('click', () => {
+        moreReviewsBtn.classList.toggle('active')
+        moreReviewsContent.forEach((item,i) => {
+            item.classList.toggle('active');
         })
     })
 });
