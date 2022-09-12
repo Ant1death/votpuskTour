@@ -4,11 +4,20 @@
     height: 50px;
     
 }
+.level__wrapper-mobile {
+    display: none;
+}
 .level__wrapper {
     display: flex;
     align-items: center;
+    margin-left: 30px;
 }
 .level__wrapper-btn {
+    width: 12px;
+    height: 12px;
+    margin-right: 12px;
+}
+.level__wrapper-btn-mobile {
     width: 12px;
     height: 12px;
     margin-right: 12px;
@@ -63,6 +72,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .hotel__header-special-wrapper-item {
     margin-right: 20px;
@@ -208,6 +218,22 @@
     margin: 0;
     text-align: center;
 }
+.hotel__page-btn {
+    cursor: pointer;
+    background: #F8991D;
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 19px;
+    color: #fff;
+    width: 200px;
+    display: block;
+    padding: 16px 28px 15px;
+    margin: 0;
+    text-align: center;
+}
 .review__wrapper-block-item {
     background: #FFF8EE;
     border-radius: 0px 50px;
@@ -289,15 +315,33 @@
     margin-top: 10px;
     cursor: pointer;
 }
+.calendar-wrapper {
+    position: relative;
+}
+
+.calendar-wrapper>img {
+    position: absolute;
+    cursor: pointer;
+    left: 12px;
+    top: 10px;
+}
+.hotel-page__all img{
+    margin-right: 12px;
+}
+.link-underline>li>img {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.hotel-page__all {
+    display: flex;
+    align-items: center;
+}
 .hotel__description-more.active img{
     transform: rotate(180deg);
     transition: 0.5s;
 }
 .hotel__description-more img {
     margin-left: 10px;
-}
-.hotel__description-more:hover {
-    color: #00ccff;
 }
 .not-free {
     border: 1px solid #F8991D;
@@ -814,6 +858,7 @@
     right: 20px;
     top: 20px;
     cursor: pointer;
+    display: none;
 }
 .modal__level-wrapper {
     margin-top: 30px;
@@ -863,6 +908,9 @@
         line-height: 16px;
 
     }
+    .level__wrapper {
+        margin-left: 20px;
+    }
     .hotel__header-special-wrapper-item:nth-last-child(1) {
         display: none;
     }
@@ -870,19 +918,26 @@
         font-size: 18px;
         line-height: 21px;
     }
+    .mobile-aside {
+        height: 130px;
+    }
 }
 @media (max-width: 768px) {
+    .modal__level-btn {
+        display: block;
+    }
 
     .modal__review-title {
         font-size: 25px;
         line-height: 29px;
     }
+    
     .reviews-block {
         max-width: 100%;
     }
     .modal__level-block {
         max-width: 100%;
-        min-height: 485px;
+        height: auto;
     }
     .modal__level-item {
         margin-top: 20px;
@@ -905,16 +960,39 @@
     }
     .tour-price__wrapper {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
     .tour-price__item {
         margin-bottom: 30px;
     }
+    
+}
+@media (max-width: 700px) {
+    .mobile-aside {
+        height: 360px;
+    } 
 }
 @media(max-width: 576px) {
     .tour-program__item {
         padding: 20px 20px 20px 20px;
+    }
+    .level__wrapper-mobile {
+        position: absolute;
+        right: 0;
+        display: flex;
+        top: 20px;
+    }
+    .level__wrapper {
+        display: none;
+    }
+    .hotel__page-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .tour-price__wrapper {
+        flex-direction: column;
+        align-items: flex-start;
     }
     .hotel-header__options-desktop {
         display: none;
@@ -981,6 +1059,7 @@
         font-size: 14px;
         line-height: 16px;
     }
+    
     .tour-program__item-day {
         font-size: 16px;
         line-height: 19px;
@@ -1025,6 +1104,7 @@
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: flex-start;
+        
     }
     .hotel__header-special-wrapper-item {
         margin-top: 10px;

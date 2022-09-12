@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/tours.css">
 <link href="css/menu.css" rel="stylesheet">
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;load=package.full"></script>
+<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;load=package.full"></script>
 <script>
                 ymaps.ready(function () {
                     var myMap = new ymaps.Map('hotel-map', {
@@ -38,7 +38,8 @@
                         iconColor: '#0095b6'
                     }))
                 })
-                </script>        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+</script>         -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     </head>
 
     <body class="hotels-page" id="page-header">
@@ -144,15 +145,29 @@
     <div class="container hotel-page">
         <a href="/hotels/russia/sochi"
            class="orange-underline hotel-page__all">
-            <svg fill="none" width="24" height="14">
-                <use href="/images/icons/sprite.svg#arrow-right"></use>
-            </svg>
+            <img src="images/icon/orange-arrow.svg" alt="">
             Смотреть все туры
         </a>
 
         
-<ul class="link-underline brd-crmbs"><li><a href="/">Главная</a></li><li><svg fill="none" width="6" height="12"><use href="/images/icons/sprite.svg#brd-crmbs"></use></svg> <a href="/hotels/russia">Туры России</a></li><li><svg fill="none" width="6" height="12"><use href="/images/icons/sprite.svg#brd-crmbs"></use></svg> <a href="/hotels/russia/sochi">Туры Сочи</a></li><li><svg fill="none" width="6" height="12"><use href="/images/icons/sprite.svg#brd-crmbs"></use></svg> Название тура</li></ul>
-        <aside>
+<ul class="link-underline brd-crmbs">
+    <li>
+        <a href="/">Главная</a>
+    </li>
+    <li>
+        <img src="images/icon/ul-arrow.svg" alt=""> 
+        <a href="/hotels/russia">Туры России</a>
+    </li>
+    <li>
+        <img src="images/icon/ul-arrow.svg" alt="">
+        <a href="/hotels/russia/sochi">Туры Сочи</a>
+    </li>
+    <li>
+        <img src="images/icon/ul-arrow.svg" alt="">
+        Название тура
+    </li>
+    </ul>
+        <aside class="mobile-aside">
             <div id="cnt_rb_245844" class="cnt32_rl_bg_str" data-id="245844"></div>
 <br>
             <div id="hotel-search-aside" class="hotels-search hotels-search--side corner-radius-two-50">
@@ -162,7 +177,7 @@
 <input type="hidden" id="h-regiontype" name="h[regionType]" value="1">
 <input type="hidden" id="h-region" name="h[region]" value="58365">
     <div class="hotels-search__mob100p" id="search-hotels">
-                <input class="hotels-search__item search-text" value="Сочи, Россия" placeholder="Город, страна или отель"
+                <input class="hotels-search__item search-text" value="Абхазия" placeholder="Город, страна или отель"
                style="border-left: none">
         <div id="search-results">
             <ul>
@@ -170,21 +185,22 @@
         </div>
     </div>
 
-    <div>
-                <input type="text" id="h-checkin" class="hotels-datepicker hotels-search__item" name="h[checkIn]" value="Ср, 07.09" readonly placeholder="Туда" data-title="Выберите дату заезда" autocomplete="off">    </div>
+    <div class="calendar-wrapper">
+        <img src="images/icon/calendar.svg" alt="">
+        <input type="text" id="h-checkin" class="hotels-datepicker hotels-search__item" name="h[checkIn]" value="Ср, 07.09" readonly placeholder="Туда" data-title="Выберите дату заезда" autocomplete="off" >    
+    </div>
 
-    <div>
-                <input type="text" id="h-checkout" class="hotels-datepicker hotels-search__item" name="h[checkOut]" value="Ср, 14.09" readonly placeholder="Обратно" data-title="Выберите дату отъезда" autocomplete="off">    </div>
+    <div class="calendar-wrapper">
+        <img src="images/icon/calendar.svg" alt="">
+        <input type="text" id="h-checkout" class="hotels-datepicker hotels-search__item" name="h[checkOut]" value="Ср, 14.09" readonly placeholder="Обратно" data-title="Выберите дату отъезда" autocomplete="off">    
+    </div>
 
     <div class="dropdown hotels-search__mob100p">
                 <div class="dropdown__btn hotels-search__item">
             <div class="rc-count-data">
-                <span class="text-nowrap">2 взрослых,</span> <span class="text-nowrap">
-                    0 детей                </span>
+                <span class="text-nowrap">Любой тип</span>
             </div>
-            <svg fill="none" width="14" height="8" class="dropdown__caret">
-                <use href="/images/icons/sprite.svg#caret-dropdown"></use>
-            </svg>
+            <img src="images/icon/arrow-program.svg" alt="">
         </div>
 
         <div class="dropdown__content">
@@ -278,7 +294,7 @@
         </div>
     </div>
 
-    <input type="submit" class="btn-orange hotels-search__mob100p" value="Найти отели">
+    <input type="submit" class="btn-orange hotels-search__mob100p" value="Найти Туры">
 
 </form>            </div>
 
@@ -327,6 +343,18 @@
                                             от 3 300 руб
                 </div> -->
                 <div class="hotel__header-special-wrapper">
+                    <div class="level__wrapper-mobile">
+                        <span class="level__wrapper-title">Уровень сложности</span>
+                        <button class="level__wrapper-btn-mobile">
+                            <img src="images/icon/info.svg" alt="#">
+                        </button>
+                        <div class="level-wrapper">
+                            <span class="level-wrapper__item active"></span>
+                            <span class="level-wrapper__item active"></span>
+                            <span class="level-wrapper__item"></span>
+                            <span class="level-wrapper__item"></span>
+                        </div>
+                    </div>
                     <div class="hotel__header-special-wrapper-item hoter__header-special-wrapper-item-rate">
                         <div class="hoter__header-special-item-rate">
                             <span class="hoter__header-special-item-rate-span">8.5</span>
@@ -369,12 +397,16 @@
             <div class="mt-30 hotel-top-sticky hotel-menu">
                 <div class="hotel-menu__content">
                     <a href="#hotel-page-foto" class="hotel-page-anchor">Фото</a>
-                                            <a href="#hotel-page-price" class="hotel-page-anchor">Цены на номера</a>
-                    
-                    <a href="#hotel-page-comments" class="hotel-page-anchor">Отзывы</a>
 
-                    <a href="#hotel-page-map" class="hotel-page-anchor">Карта</a>
-                    <!--                <a href="#hotel-page-about" class="hotel-page-anchor">Об отеле</a>-->
+                    <a href="#hotel-page-dates" class="hotel-page-anchor">Доступные даты</a>
+                    
+                    <a href="#hotel-page-programm" class="hotel-page-anchor">Программа тура</a>
+
+                    <a href="#hotel-page-about" class="hotel-page-anchor">Описание</a>
+
+                    <a href="#hotel-page-important" class="hotel-page-anchor">Важно</a>
+
+                    <a href="#hotel-page-reviews" class="hotel-page-anchor">Отзывы</a>
                 </div>
             </div>
 
@@ -414,14 +446,10 @@
                                             </div>
                 </div>
                 <button class="swiper-custom-btn swiper-custom-btn--prev">
-                    <svg fill="none" width="9" height="18">
-                        <use href="/images/icons/sprite.svg#swiper-nav"></use>
-                    </svg>
+                    <img src="images/icon/left-swiper-arrow.svg" alt="">
                 </button>
                 <button class="swiper-custom-btn swiper-custom-btn--next">
-                    <svg fill="none" width="9" height="18">
-                        <use href="/images/icons/sprite.svg#swiper-nav"></use>
-                    </svg>
+                    <img src="images/icon/right-swiper-arrow.svg" alt="">
                 </button>
             </div>
             <div class="swiper swiper-hotel-page-thumbs">
@@ -473,7 +501,7 @@
             <br>
             <br>
             <div class="divider"></div>
-            <section class="date-group">
+            <section class="date-group" id="hotel-page-dates">
                 <div class="date-group__header">
                     <h3 class="date-group__title h3-title">Даты набора групп</h3>
                     <div class="date-group__subtitle">Купить тур можно только на сайтах-партнерах Votpusk.ru</div>
@@ -554,7 +582,7 @@
                     <div class="divider"></div>
                 </div>
             </section>
-            <section class="tour-program">
+            <section class="tour-program" id="hotel-page-programm">
                 <h3 class="tour-program__title h3-title">Программа тура</h3>
                 <div class="tour-program__wrapper">
                     <div class="tour-program__item">
@@ -625,7 +653,7 @@
                 <div class="hotel__description-more">Показать все описание <img src="images/icon/hotel__description-more.svg" alt=""></div>
             </section>
             
-            <section class="important-info">
+            <section class="important-info" id="hotel-page-important">
                 <div class="divider"></div>
                 <div class="hotels-h3 text-left">Важная информация</div>
                 <div class="important-info__wrapper">
@@ -824,14 +852,14 @@
                     </div>
                             </section> -->
             
-                            <section id="hotel-page-comments" class="bordered-top hotel-comments" style="padding-top: 0px">
+                            <section id="hotel-page-reviews" class="bordered-top hotel-comments" style="padding-top: 0px">
                     <div class="reviews">
 
                         <div class="reviews-block">
                             <div class="reviews-header">
                                 <h3>Отзывы туристов</h3>
                                 <!-- <h6>Отзывов нет</h6> -->
-                                <a href="#" data-fancybox='' data-src="#send-comment">написать отзыв</a>
+                                <button class="hotel__page-btn" data-fancybox='' data-src="#send-comment">написать отзыв</button>
                             </div>
                             <!-- <h4>Вы отдыхали в отеле “Старая дача”?</h4>
                             <p>Оставьте отзыв и он будет первым!</p> -->
@@ -1163,14 +1191,10 @@
         </div>
 
         <button class="swiper-custom-btn swiper-custom-btn--prev">
-            <svg fill="none" width="9" height="18">
-                <use href="/images/icons/sprite.svg#swiper-nav"></use>
-            </svg>
+            <img src="images/icon/left-swiper-arrow.svg" alt="arrow">
         </button>
         <button class="swiper-custom-btn swiper-custom-btn--next">
-            <svg fill="none" width="9" height="18">
-                <use href="/images/icons/sprite.svg#swiper-nav"></use>
-            </svg>
+            <img src="images/icon/right-swiper-arrow.svg" alt="arrow">
         </button>
     </div>
 
@@ -1658,21 +1682,21 @@
         </div>
     </div>
 </div> -->
-<script src="js/jquery.barrating.min.js"></script> 
-<script
+<!-- <script src="js/jquery.barrating.min.js"></script>  -->
+<!-- <script
   src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
   integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> -->
  
-<script src="js/main.js"></script>
-<script src="js/hotels.js"></script>
-<script src="js/hotels-common.js"></script>
+<!-- <script src="js/main.js"></script> -->
+<!-- <script src="js/hotels.js"></script> -->
+<!-- <script src="js/hotels-common.js"></script> -->
 <script src="js/script.js"></script>
-<script>$('#reviews-stars').barrating({
+<!-- <script>$('#reviews-stars').barrating({
         theme: 'css-stars',
         showSelectedRating: false
     });</script> -->
- <script>jQuery(function ($) {
+ <!-- <script>jQuery(function ($) {
 jQuery('#reservation-form').yiiActiveForm([], []);
 jQuery('#hotelsreviews-verifycode-image').yiiCaptcha({"refreshUrl":"\/site\/captcha.asp?refresh=1","hashKey":"yiiCaptcha\/site\/captcha"});
 jQuery('#reviews-create').yiiActiveForm([{"id":"hotelsreviews-hotel_id","name":"hotel_id","container":".field-review_hotel_id","input":"#review_hotel_id","validate":function (attribute, value, messages, deferred, $form) {yii.validation.number(value, messages, {"pattern":/^[+-]?\d+$/,"message":"Значение «Id Отеля» должно быть целым числом.","skipOnEmpty":1});}},{"id":"hotelsreviews-username","name":"username","container":".field-hotelsreviews-username","input":"#hotelsreviews-username","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Имя»."});yii.validation.string(value, messages, {"message":"Значение «Имя» должно быть строкой.","max":255,"tooLong":"Значение «Имя» должно содержать максимум 255 символов.","skipOnEmpty":1});}},{"id":"hotelsreviews-review","name":"review","container":".field-hotelsreviews-review","input":"#hotelsreviews-review","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Отзыв»."});yii.validation.string(value, messages, {"message":"Значение «Отзыв» должно быть строкой.","skipOnEmpty":1});}},{"id":"hotelsreviews-verifycode","name":"verifyCode","container":".field-hotelsreviews-verifycode","input":"#hotelsreviews-verifycode","validate":function (attribute, value, messages, deferred, $form) {yii.validation.captcha(value, messages, {"hash":6465,"hashKey":"yiiCaptcha/site/captcha","caseSensitive":false,"message":"Неправильный проверочный код."});}}], {"validationUrl":"\/hotels\/reviews"});
@@ -1682,7 +1706,7 @@ jQuery('#reviews-create').yiiActiveForm([{"id":"hotelsreviews-hotel_id","name":"
 
     const observer = lozad(); observer.observe();
     
-});</script>    
+});</script>     -->
 
   </body>
 

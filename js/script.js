@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
           openProgramBtn = document.querySelectorAll('.tour-program__item-btn'),
           programContent = document.querySelectorAll('.tour-program__item-text'),
           openLevelBtn = document.querySelector('.level__wrapper-btn'),
+          openLevelBtnMobile = document.querySelector('.level__wrapper-btn-mobile'),
           levelModal = document.querySelector('.modal-level'),
           closeLevelBtn = document.querySelector('.modal__level-btn'),
           tourDescriptionBtn = document.querySelector('.hotel__description-more'),
@@ -15,6 +16,16 @@ window.addEventListener('DOMContentLoaded', () => {
           personaItemsText = document.querySelectorAll('.important-info__item-text'),
           moreReviewsBtn = document.querySelector('.review__wrapper-block-item-more'),
           moreReviewsContent = document.querySelectorAll('.review__wrapper-block-item-sub');
+
+
+    levelModal.addEventListener('click', (e) => {
+        const target = e.target;
+        if(target === levelModal && !target.classList.contains('modal__level-block')) {
+            levelModal.classList.remove('show');
+            levelModal.classList.add('hide');
+        } 
+        
+    })
 
 
     openReviewModalBtn.addEventListener('click', (e) => {
@@ -31,7 +42,11 @@ window.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'auto';
         })
     })
-    openLevelBtn.addEventListener('click', () => {
+    openLevelBtn.addEventListener('mouseover', () => {
+        levelModal.classList.remove('hide');
+        levelModal.classList.add('show');
+    })
+    openLevelBtnMobile.addEventListener('click', () => {
         levelModal.classList.remove('hide');
         levelModal.classList.add('show');
     })
@@ -39,6 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
         levelModal.classList.remove('show');
         levelModal.classList.add('hide');
     })
+    
     function openProgramContent (i = 0) {
         openProgramBtn[i].classList.toggle('active');
         programContent[i].classList.toggle('active');
