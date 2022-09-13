@@ -11,11 +11,74 @@
     display: flex;
     align-items: center;
     margin-left: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.level__wrapper-mouseover {
+    display: none;
+    position: absolute;
+    bottom: -350px;
+    left: -200px;
+    background: #fff;
+    border-radius: 30px;
+    z-index: 1000;
+    padding: 20px;
+    border: 1px solid #ebebeb;
+}
+.level__wrapper:hover .level__wrapper-mouseover {
+    display: block;
+}
+.level__wrapper-mouseover-type-wrapper {
+    display: flex;
+}
+.level__wrapper-mouseover-wrapper-items {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    
+}
+.level__wrapper-mouseover-wrapper-item {
+    margin-bottom: 20px;
+}
+.level__wrapper-mouseover-title {
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 35px;
+    color: #200E32;
+    margin-bottom: 20px;
+}
+.level__wrapper-mouseover-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.level__wrapper-mouseover-type {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #0662BA;
+    margin-right: 19px;
+}
+.level__wrapper-btn:hover .level__wrapper-mouseover{
+    display: block;
 }
 .level__wrapper-btn {
     width: 12px;
     height: 12px;
     margin-right: 12px;
+}
+.hotel-page-anchor {
+    font-size: 16px;
+    line-height: 19px;
 }
 .level__wrapper-btn-mobile {
     width: 12px;
@@ -336,13 +399,6 @@
     display: flex;
     align-items: center;
 }
-.hotel__description-more.active img{
-    transform: rotate(180deg);
-    transition: 0.5s;
-}
-.hotel__description-more img {
-    margin-left: 10px;
-}
 .not-free {
     border: 1px solid #F8991D;
     border-radius: 2px;
@@ -368,6 +424,18 @@
 .hotel-header__options-mobile {
     display: none;
 }
+.hotel__description-more-wrapper {
+    display: flex;
+    align-items: baseline;
+}
+.hotel__description-more-wrapper img{
+    margin-left: 10px;
+    cursor: pointer;
+}
+.hotel__description-more-img.active {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
 .review__wrapper-block-item-more {
     text-align: right;
     font-family: 'Roboto';
@@ -381,6 +449,7 @@
     justify-content: flex-end;
     cursor: pointer;
     text-decoration: underline;
+    margin-bottom: 50px;
 }
 .review__wrapper-block-item-more.active img {
     transform: rotate(180deg);
@@ -926,7 +995,9 @@
     .modal__level-btn {
         display: block;
     }
-
+    .level__wrapper-mouseover {
+        left: -280px;
+    }
     .modal__review-title {
         font-size: 25px;
         line-height: 29px;

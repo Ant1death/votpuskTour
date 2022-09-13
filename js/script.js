@@ -7,10 +7,12 @@ window.addEventListener('DOMContentLoaded', () => {
           openProgramBtn = document.querySelectorAll('.tour-program__item-btn'),
           programContent = document.querySelectorAll('.tour-program__item-text'),
           openLevelBtn = document.querySelector('.level__wrapper-btn'),
+          levelDropDown = document.querySelector('.level__wrapper-mouseover'),
           openLevelBtnMobile = document.querySelector('.level__wrapper-btn-mobile'),
           levelModal = document.querySelector('.modal-level'),
           closeLevelBtn = document.querySelector('.modal__level-btn'),
           tourDescriptionBtn = document.querySelector('.hotel__description-more'),
+          tourImgBtn = document.querySelector('.hotel__description-more-img'),
           tourDescription = document.querySelector('.hotel__subdescription'),
           personalItemsBtn = document.querySelectorAll('.important-info__item-btn'),
           personaItemsText = document.querySelectorAll('.important-info__item-text'),
@@ -42,10 +44,9 @@ window.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'auto';
         })
     })
-    openLevelBtn.addEventListener('mouseover', () => {
-        levelModal.classList.remove('hide');
-        levelModal.classList.add('show');
-    })
+    // openLevelBtn.addEventListener('mouseover', () => {
+    //     levelDropDown.classList.toggle('active');
+    // })
     openLevelBtnMobile.addEventListener('click', () => {
         levelModal.classList.remove('hide');
         levelModal.classList.add('show');
@@ -84,6 +85,12 @@ window.addEventListener('DOMContentLoaded', () => {
     tourDescriptionBtn.addEventListener('click', () => {
         tourDescription.classList.toggle('active');
         tourDescriptionBtn.classList.toggle('active');
+        tourImgBtn.classList.toggle('active');
+        if(tourDescriptionBtn.classList.contains('active')) {
+            tourDescriptionBtn.innerText = 'Скрыть описание';
+        } else {
+            tourDescriptionBtn.innerText = 'Показать все описание';
+        }
     });
     function openPersonalItems (i = 0) {
         personalItemsBtn[i].classList.toggle('active');
