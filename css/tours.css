@@ -14,6 +14,23 @@
     position: relative;
     cursor: pointer;
 }
+#hotel-page-dates-url {
+    padding: 0 26px;
+    text-align: center;
+}
+#hotel-page-dates-url>br {
+    display: none;
+}
+#hotel-page-programm-url>br {
+    display: none;
+}
+#hotel-page-programm-url {
+    padding: 0 26px;
+    text-align: center;
+}
+#hotel-page-about-url {
+    padding: 0 26px;
+}
 .level__wrapper-mouseover {
     display: none;
     position: absolute;
@@ -989,6 +1006,31 @@
     }
     .mobile-aside {
         height: 130px;
+    }
+    #hotel-page-dates-url {
+        padding: 0 19px;
+        text-align: center;
+    }
+    #hotel-page-programm-url {
+        padding: 0 19px;
+        text-align: center;
+    }
+    #hotel-page-about-url {
+        padding: 0 19px;
+    }
+    #hotel-page-dates-url>br {
+        display: block;
+    }
+    #hotel-page-programm-url>br {
+        display: block;
+    }
+}
+@media(max-width:700px) {
+    #hotel-page-dates-url>br {
+        display: none;
+    }
+    #hotel-page-programm-url>br {
+        display: none;
     }
 }
 @media (max-width: 768px) {
